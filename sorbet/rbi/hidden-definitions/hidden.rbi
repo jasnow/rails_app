@@ -1346,6 +1346,15 @@ end
 class ActionDispatch::Session::CookieStore
 end
 
+class ActionDispatch::Session::MemCacheStore
+  include ::ActionDispatch::Session::Compatibility
+  include ::ActionDispatch::Session::StaleSessionCheck
+  include ::ActionDispatch::Session::SessionObject
+end
+
+class ActionDispatch::Session::MemCacheStore
+end
+
 module ActionDispatch::Session::SessionObject
   def loaded_session?(session); end
 
@@ -4203,6 +4212,26 @@ end
 class ActiveSupport::Cache::FileStore
 end
 
+class ActiveSupport::Cache::MemCacheStore
+  include ::ActiveSupport::Cache::Strategy::LocalCache
+  include ::ActiveSupport::Cache::MemCacheStore::LocalCacheWithRaw
+  def initialize(*addresses); end
+
+  def stats(); end
+  ESCAPE_KEY_CHARS = ::T.let(nil, ::T.untyped)
+end
+
+module ActiveSupport::Cache::MemCacheStore::LocalCacheWithRaw
+end
+
+module ActiveSupport::Cache::MemCacheStore::LocalCacheWithRaw
+  extend ::T::Sig
+end
+
+class ActiveSupport::Cache::MemCacheStore
+  def self.build_mem_cache(*addresses); end
+end
+
 class ActiveSupport::Cache::MemoryStore
   PER_ENTRY_OVERHEAD = ::T.let(nil, ::T.untyped)
 end
@@ -6558,6 +6587,58 @@ class Crass::Tokenizer
 end
 
 module Crass
+  extend ::T::Sig
+end
+
+module Dalli
+  VERSION = ::T.let(nil, ::T.untyped)
+end
+
+class Dalli::Client
+  CACHE_NILS = ::T.let(nil, ::T.untyped)
+end
+
+class Dalli::Ring
+  POINTS_PER_SERVER = ::T.let(nil, ::T.untyped)
+end
+
+class Dalli::Server
+  CAS_HEADER = ::T.let(nil, ::T.untyped)
+  DEFAULTS = ::T.let(nil, ::T.untyped)
+  DEFAULT_PORT = ::T.let(nil, ::T.untyped)
+  DEFAULT_WEIGHT = ::T.let(nil, ::T.untyped)
+  FLAG_COMPRESSED = ::T.let(nil, ::T.untyped)
+  FLAG_SERIALIZED = ::T.let(nil, ::T.untyped)
+  FORMAT = ::T.let(nil, ::T.untyped)
+  HEADER = ::T.let(nil, ::T.untyped)
+  KV_HEADER = ::T.let(nil, ::T.untyped)
+  MAX_ACCEPTABLE_EXPIRATION_INTERVAL = ::T.let(nil, ::T.untyped)
+  NORMAL_HEADER = ::T.let(nil, ::T.untyped)
+  NOT_FOUND = ::T.let(nil, ::T.untyped)
+  OPCODES = ::T.let(nil, ::T.untyped)
+  OP_FORMAT = ::T.let(nil, ::T.untyped)
+  REQUEST = ::T.let(nil, ::T.untyped)
+  RESPONSE = ::T.let(nil, ::T.untyped)
+  RESPONSE_CODES = ::T.let(nil, ::T.untyped)
+end
+
+module Dalli::Server::KSocket::InstanceMethods
+  extend ::T::Sig
+end
+
+module Dalli::Server::KSocket
+  extend ::T::Sig
+end
+
+module Dalli::Server::TCPSocketOptions
+  extend ::T::Sig
+end
+
+module Dalli::Threadsafe
+  extend ::T::Sig
+end
+
+module Dalli
   extend ::T::Sig
 end
 
@@ -15452,21 +15533,7 @@ module MiniMime
   extend ::T::Sig
 end
 
-module Minitest
-end
-
-MiniTest::Assertions = Minitest::Assertions
-
-MiniTest::Guard = Minitest::Guard
-
-MiniTest::Reportable = Minitest::Reportable
-
-MiniTest::Runnable = Minitest::Runnable
-
-MiniTest::Test = Minitest::Test
-
-module Minitest
-end
+MiniTest = Minitest
 
 module Minitest
   ENCS = ::T.let(nil, ::T.untyped)
@@ -15842,8 +15909,6 @@ end
 class Net::HTTPIMUsed
   extend ::T::Sig
 end
-
-Net::HTTPInformation::EXCEPTION_TYPE = Net::HTTPError
 
 class Net::HTTPInformation
   extend ::T::Sig
@@ -20047,6 +20112,24 @@ class Rack::Session::Cookie::Identity
 end
 
 class Rack::Session::Cookie
+end
+
+class Rack::Session::Dalli
+  def destroy_session(env, session_id, options); end
+
+  def find_session(req, sid); end
+
+  def get_session(env, sid); end
+
+  def mutex(); end
+
+  def pool(); end
+
+  def set_session(env, session_id, new_session, options); end
+  DEFAULT_DALLI_OPTIONS = ::T.let(nil, ::T.untyped)
+end
+
+class Rack::Session::Dalli
 end
 
 class Rack::Session::Pool

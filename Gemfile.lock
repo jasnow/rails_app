@@ -47,6 +47,7 @@ GEM
     byebug (11.0.1)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+    dalli (2.7.10)
     erubi (1.8.0)
     ffi (1.11.1)
     globalid (0.4.2)
@@ -133,10 +134,11 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  dalli
   listen
   puma
   rails (~> 5.2.3)
-  redis (~> 4.0)
+  redis
   sorbet
   sorbet-rails
   sorbet-runtime

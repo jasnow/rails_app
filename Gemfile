@@ -11,8 +11,6 @@ gem 'sqlite3'
 gem 'puma'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -31,6 +29,9 @@ gem 'redis', '~> 4.0'
 gem 'sorbet', :group => :development
 gem 'sorbet-runtime'
 gem 'sorbet-rails'
+# Use Redis adapter to run Action Cable in production
+gem 'redis' # for cache_store
+gem 'dalli' # for cache_store
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

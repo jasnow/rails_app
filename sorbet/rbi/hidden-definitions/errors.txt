@@ -430,6 +430,9 @@
 # wrong constant name delete_session
 # wrong constant name load_session
 # wrong constant name <static-init>
+# uninitialized constant ActionDispatch::Session::MemCacheStore::DEFAULT_DALLI_OPTIONS
+# uninitialized constant ActionDispatch::Session::MemCacheStore::DEFAULT_OPTIONS
+# wrong constant name <static-init>
 # wrong constant name loaded_session?
 # wrong constant name prepare_session
 # wrong constant name <static-init>
@@ -1199,12 +1202,19 @@
 # wrong constant name <static-init>
 # wrong constant name <Class:ConnectionPoolLike>
 # wrong constant name <Class:FileStore>
+# wrong constant name <Class:MemCacheStore>
 # wrong constant name <Class:RedisCacheStore>
 # wrong constant name with
 # wrong constant name <static-init>
 # wrong constant name cache_path
 # wrong constant name initialize
 # wrong constant name <static-init>
+# wrong constant name <Class:LocalCacheWithRaw>
+# wrong constant name initialize
+# wrong constant name stats
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name build_mem_cache
 # wrong constant name <Class:LocalCacheWithRaw>
 # wrong constant name initialize
 # wrong constant name max_key_bytesize
@@ -6831,6 +6841,8 @@
 # uninitialized constant Net::HTTP::DigestAuth
 # uninitialized constant Net::HTTP::Persistent
 # uninitialized constant Net::HTTP::Persistent
+# wrong constant name HTTPInformationCode$1
+# wrong constant name HTTPInformationCode$1
 # uninitialized constant Net::IMAP::OPENSSL_FIPS
 # uninitialized constant Net::IMAP::OPENSSL_LIBRARY_VERSION
 # uninitialized constant Net::IMAP::OPENSSL_VERSION
@@ -8403,6 +8415,14 @@
 # wrong constant name decode
 # wrong constant name encode
 # wrong constant name <static-init>
+# wrong constant name <static-init>
+# uninitialized constant Rack::Session::Dalli::DEFAULT_OPTIONS
+# wrong constant name destroy_session
+# wrong constant name find_session
+# wrong constant name get_session
+# wrong constant name mutex
+# wrong constant name pool
+# wrong constant name set_session
 # wrong constant name <static-init>
 # wrong constant name delete_session
 # wrong constant name find_session
