@@ -15910,6 +15910,8 @@ class Net::HTTPIMUsed
   extend ::T::Sig
 end
 
+Net::HTTPInformation::EXCEPTION_TYPE = Net::HTTPError
+
 class Net::HTTPInformation
   extend ::T::Sig
 end

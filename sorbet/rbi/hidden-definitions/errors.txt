@@ -6841,8 +6841,6 @@
 # uninitialized constant Net::HTTP::DigestAuth
 # uninitialized constant Net::HTTP::Persistent
 # uninitialized constant Net::HTTP::Persistent
-# wrong constant name HTTPInformationCode$1
-# wrong constant name HTTPInformationCode$1
 # uninitialized constant Net::IMAP::OPENSSL_FIPS
 # uninitialized constant Net::IMAP::OPENSSL_LIBRARY_VERSION
 # uninitialized constant Net::IMAP::OPENSSL_VERSION
