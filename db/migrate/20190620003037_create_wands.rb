@@ -1,5 +1,6 @@
 # typed: true
 class CreateWands < ActiveRecord::Migration[5.2]
+  sig { returns(T.untyped) }
   def change
     create_table :wands do |t|
       t.references :wizard, unique: true, null: false

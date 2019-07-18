@@ -1,5 +1,6 @@
 # typed: true
 class CreateWizards < ActiveRecord::Migration[5.2]
+  sig { returns(T.untyped) }
   def change
     create_table :wizards do |t|
       t.string :name

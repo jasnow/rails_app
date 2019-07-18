@@ -10,6 +10,7 @@ class Wand < ApplicationRecord
 
   belongs_to :wizard
 
+  sig { returns(T.untyped) }
   def wood_type
     'Type ' + super
   end
