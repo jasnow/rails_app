@@ -1,4 +1,4 @@
-# typed: true
+# typed: strict
 class CreateWizards < ActiveRecord::Migration[5.2]
   sig { returns(T.untyped) }
   def change

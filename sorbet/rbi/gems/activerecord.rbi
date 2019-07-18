@@ -887,6 +887,7 @@ class ActiveRecord::ExplainRegistry
   def queries; end
   def queries=(arg0); end
   def reset; end
+  def self.collect?(*args, &block); end
   extend ActiveSupport::PerThreadRegistry
 end
 class ActiveRecord::ExplainSubscriber
@@ -3610,11 +3611,6 @@ module ActiveRecord::Migration::Compatibility::V4_2::TableDefinition
   def references(*arg0, **options); end
   def timestamps(**options); end
 end
-class ActiveRecord::Schema < ActiveRecord::Migration::Current
-  def define(info, &block); end
-  def migrations_paths; end
-  def self.define(info = nil, &block); end
-end
 class ActiveRecord::ConnectionAdapters::TransactionState
   def add_child(state); end
   def commit!; end
@@ -3676,6 +3672,17 @@ class ActiveRecord::ConnectionAdapters::TransactionManager
   def open_transactions; end
   def rollback_transaction(transaction = nil); end
   def within_new_transaction(options = nil); end
+end
+class CreateWizards < ActiveRecord::Migration::Current
+end
+class CreateWands < ActiveRecord::Migration::Current
+end
+class CreateSpellBooks < ActiveRecord::Migration::Current
+end
+class ActiveRecord::Schema < ActiveRecord::Migration::Current
+  def define(info, &block); end
+  def migrations_paths; end
+  def self.define(info = nil, &block); end
 end
 class ActiveRecord::Result
   def [](idx); end

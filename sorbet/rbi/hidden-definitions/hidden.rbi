@@ -3359,10 +3359,6 @@ module ActiveRecord::Explain
   extend ::T::Sig
 end
 
-class ActiveRecord::ExplainRegistry
-  def self.collect?(*args, &block); end
-end
-
 class ActiveRecord::ExplainSubscriber
   EXPLAINED_SQLS = ::T.let(nil, ::T.untyped)
   IGNORED_PAYLOADS = ::T.let(nil, ::T.untyped)
@@ -5258,6 +5254,30 @@ module Bundler::BuildMetadata
   extend ::T::Sig
 end
 
+class Bundler::CurrentRuby
+  def jruby_27?(); end
+
+  def maglev_27?(); end
+
+  def mingw_27?(); end
+
+  def mri_27?(); end
+
+  def mswin64_27?(); end
+
+  def mswin_27?(); end
+
+  def on_27?(); end
+
+  def rbx_27?(); end
+
+  def ruby_27?(); end
+
+  def truffleruby_27?(); end
+
+  def x64_mingw_27?(); end
+end
+
 Bundler::Deprecate = Gem::Deprecate
 
 class Bundler::Env
@@ -5273,6 +5293,8 @@ end
 
 class Bundler::FeatureFlag
   def github_https?(); end
+
+  def lockfile_upgrade_warning?(); end
 end
 
 class Bundler::Fetcher
@@ -5449,8 +5471,16 @@ class Bundler::Fetcher
   def self.redirect_limit=(redirect_limit); end
 end
 
+module Bundler::FileUtils
+  VERSION = ::T.let(nil, ::T.untyped)
+end
+
 module Bundler::FileUtils::DryRun
   extend ::T::Sig
+end
+
+class Bundler::FileUtils::Entry_
+  def link(dest); end
 end
 
 module Bundler::FileUtils::LowMethods
@@ -5471,6 +5501,9 @@ end
 
 module Bundler::FileUtils
   extend ::T::Sig
+  def self.cp_lr(src, dest, noop: T.unsafe(nil), verbose: T.unsafe(nil), dereference_root: T.unsafe(nil), remove_destination: T.unsafe(nil)); end
+
+  def self.link_entry(src, dest, dereference_root=T.unsafe(nil), remove_destination=T.unsafe(nil)); end
 end
 
 class Bundler::GemHelper
@@ -5514,7 +5547,9 @@ class Bundler::GemHelper
 
   def sh(cmd, &block); end
 
-  def sh_with_code(cmd, &block); end
+  def sh_with_input(cmd); end
+
+  def sh_with_status(cmd, &block); end
 
   def spec_path(); end
 
@@ -5901,10 +5936,13 @@ module Bundler::RubyDsl
 end
 
 class Bundler::RubyGemsGemInstaller
-  def initialize(gem, options=T.unsafe(nil)); end
 end
 
 class Bundler::RubyGemsGemInstaller
+end
+
+class Bundler::RubygemsIntegration::MoreFuture
+  def default_stubs(); end
 end
 
 class Bundler::Settings::Mirror
@@ -7121,8 +7159,6 @@ module Enumerable
   def each_entry(*_); end
 
   def grep_v(_); end
-
-  def lazy(); end
 
   def slice_after(*_); end
 
@@ -13716,25 +13752,8 @@ class JSON::CircularDatastructure
   extend ::T::Sig
 end
 
-module JSON::Ext
-end
-
-module JSON::Ext::Generator
-end
-
-module JSON::Ext::Generator::GeneratorMethods
-end
-
-module JSON::Ext::Generator::GeneratorMethods::Array
-  def to_json(*_); end
-end
-
 module JSON::Ext::Generator::GeneratorMethods::Array
   extend ::T::Sig
-end
-
-module JSON::Ext::Generator::GeneratorMethods::FalseClass
-  def to_json(*_); end
 end
 
 module JSON::Ext::Generator::GeneratorMethods::FalseClass
@@ -13742,15 +13761,7 @@ module JSON::Ext::Generator::GeneratorMethods::FalseClass
 end
 
 module JSON::Ext::Generator::GeneratorMethods::Float
-  def to_json(*_); end
-end
-
-module JSON::Ext::Generator::GeneratorMethods::Float
   extend ::T::Sig
-end
-
-module JSON::Ext::Generator::GeneratorMethods::Hash
-  def to_json(*_); end
 end
 
 module JSON::Ext::Generator::GeneratorMethods::Hash
@@ -13758,15 +13769,7 @@ module JSON::Ext::Generator::GeneratorMethods::Hash
 end
 
 module JSON::Ext::Generator::GeneratorMethods::Integer
-  def to_json(*_); end
-end
-
-module JSON::Ext::Generator::GeneratorMethods::Integer
   extend ::T::Sig
-end
-
-module JSON::Ext::Generator::GeneratorMethods::NilClass
-  def to_json(*_); end
 end
 
 module JSON::Ext::Generator::GeneratorMethods::NilClass
@@ -13774,27 +13777,11 @@ module JSON::Ext::Generator::GeneratorMethods::NilClass
 end
 
 module JSON::Ext::Generator::GeneratorMethods::Object
-  def to_json(*_); end
-end
-
-module JSON::Ext::Generator::GeneratorMethods::Object
   extend ::T::Sig
 end
 
 module JSON::Ext::Generator::GeneratorMethods::String
-  def to_json(*_); end
-
-  def to_json_raw(*_); end
-
-  def to_json_raw_object(); end
-end
-
-module JSON::Ext::Generator::GeneratorMethods::String
   extend ::T::Sig
-end
-
-module JSON::Ext::Generator::GeneratorMethods::TrueClass
-  def to_json(*_); end
 end
 
 module JSON::Ext::Generator::GeneratorMethods::TrueClass
@@ -13806,62 +13793,11 @@ module JSON::Ext::Generator::GeneratorMethods
 end
 
 class JSON::Ext::Generator::State
-  def [](_); end
-
-  def []=(_, _1); end
-
-  def allow_nan?(); end
-
-  def array_nl(); end
-
-  def array_nl=(array_nl); end
-
-  def ascii_only?(); end
-
-  def buffer_initial_length(); end
-
-  def buffer_initial_length=(buffer_initial_length); end
-
-  def check_circular?(); end
-
-  def configure(_); end
-
-  def depth(); end
-
-  def depth=(depth); end
-
-  def generate(_); end
-
-  def indent(); end
-
-  def indent=(indent); end
-
-  def initialize(*_); end
-
-  def max_nesting(); end
-
-  def max_nesting=(max_nesting); end
-
-  def merge(_); end
-
-  def object_nl(); end
-
-  def object_nl=(object_nl); end
-
-  def space(); end
-
-  def space=(space); end
-
-  def space_before(); end
-
-  def space_before=(space_before); end
-
-  def to_h(); end
-
-  def to_hash(); end
+  include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
 
 class JSON::Ext::Generator::State
+  extend ::T::Sig
   def self.from_state(_); end
 end
 
@@ -13870,14 +13806,12 @@ module JSON::Ext::Generator
 end
 
 class JSON::Ext::Parser
+  include ::ActiveSupport::ToJsonWithActiveSupportEncoder
   def initialize(*_); end
-
-  def parse(); end
-
-  def source(); end
 end
 
 class JSON::Ext::Parser
+  extend ::T::Sig
 end
 
 module JSON::Ext
@@ -15806,8 +15740,6 @@ module Net::HTTP::ProxyDelta
   extend ::T::Sig
 end
 
-Net::HTTP::ProxyMod = Net::HTTP::ProxyDelta
-
 class Net::HTTP::Put
   extend ::T::Sig
 end
@@ -15925,8 +15857,6 @@ end
 class Net::HTTPIMUsed
   extend ::T::Sig
 end
-
-Net::HTTPInformation::EXCEPTION_TYPE = Net::HTTPError
 
 class Net::HTTPInformation
   extend ::T::Sig
@@ -16108,7 +16038,15 @@ class Net::HTTPServiceUnavailable
   extend ::T::Sig
 end
 
-Net::HTTPSession = Net::HTTP
+class Net::HTTP
+end
+
+Net::HTTPSession::ProxyDelta = Net::HTTP::ProxyDelta
+
+Net::HTTPSession::ProxyMod = Net::HTTP::ProxyDelta
+
+class Net::HTTP
+end
 
 Net::HTTPSuccess::EXCEPTION_TYPE = Net::HTTPError
 
@@ -23407,8 +23345,6 @@ class String
 
   def encode!(*_); end
 
-  def match?(*_); end
-
   def reverse!(); end
 
   def shellescape(); end
@@ -23702,7 +23638,7 @@ class Tempfile::Remover
 end
 
 class TestController
-  def index(); end
+  def index(*args, &blk); end
 end
 
 class TestController
@@ -24848,7 +24784,7 @@ class Wand
 
   def belongs_to_counter_cache_after_update(reflection); end
 
-  def wood_type(); end
+  def wood_type(*args, &blk); end
 end
 
 module Wand::GeneratedAssociationMethods
