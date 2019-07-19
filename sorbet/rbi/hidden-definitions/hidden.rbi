@@ -18106,8 +18106,6 @@ class Proc
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
   def ===(*_); end
 
-  def [](*_); end
-
   def clone(); end
 
   def lambda?(); end
