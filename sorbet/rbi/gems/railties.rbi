@@ -657,6 +657,12 @@ class Rails::Generators::TestCase < ActiveSupport::TestCase
   include Rails::Generators::Testing::Behaviour
   include Rails::Generators::Testing::SetupAndTeardown
 end
+class ActiveRecord::Scoping::ScopeRegistry
+  def self.value_for(*args, &block); end
+end
+class ActiveRecord::SchemaMigration < ActiveRecord::Base
+  def self.default_scope_override; end
+end
 module ActiveSupport
 end
 class ActiveSupport::TestCase < Minitest::Test

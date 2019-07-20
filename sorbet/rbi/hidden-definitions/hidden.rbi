@@ -3049,13 +3049,6 @@ module ActiveRecord::AttributeMethods
 end
 
 module ActiveRecord::AttributeMethods::AttrNames
-  ATTR_36275616475646f51647 = ::T.let(nil, ::T.untyped)
-  ATTR_57074616475646f51647 = ::T.let(nil, ::T.untyped)
-  ATTR_6716c65756 = ::T.let(nil, ::T.untyped)
-  ATTR_b65697 = ::T.let(nil, ::T.untyped)
-end
-
-module ActiveRecord::AttributeMethods::AttrNames
   extend ::T::Sig
 end
 
@@ -3392,20 +3385,47 @@ module ActiveRecord::Integration
   extend ::T::Sig
 end
 
+class ActiveRecord::InternalMetadata
+  include ::ActiveRecord::InternalMetadata::GeneratedAssociationMethods
+end
+
+module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
+end
+
 module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
   extend ::T::Sig
 end
 
+class ActiveRecord::InternalMetadata
+  def self.[](key); end
+
+  def self.[]=(key, value); end
+
+  def self.create_table(); end
+end
+
+module ActiveRecord::LegacyYamlAdapter
+end
+
+module ActiveRecord::LegacyYamlAdapter::Rails41
+end
+
 module ActiveRecord::LegacyYamlAdapter::Rails41
   extend ::T::Sig
+  def self.convert(klass, coder); end
+end
+
+module ActiveRecord::LegacyYamlAdapter::Rails420
 end
 
 module ActiveRecord::LegacyYamlAdapter::Rails420
   extend ::T::Sig
+  def self.convert(klass, coder); end
 end
 
 module ActiveRecord::LegacyYamlAdapter
   extend ::T::Sig
+  def self.convert(klass, coder); end
 end
 
 class ActiveRecord::Locking::LockingType
@@ -3734,6 +3754,10 @@ module ActiveRecord::Sanitization
   extend ::T::Sig
 end
 
+class ActiveRecord::Schema
+  def define(info, &block); end
+end
+
 module ActiveRecord::SchemaMigration::GeneratedAssociationMethods
   extend ::T::Sig
 end
@@ -3752,10 +3776,6 @@ end
 
 class ActiveRecord::Scoping::ScopeRegistry
   VALID_SCOPE_TYPES = ::T.let(nil, ::T.untyped)
-end
-
-class ActiveRecord::Scoping::ScopeRegistry
-  def self.value_for(*args, &block); end
 end
 
 module ActiveRecord::Scoping
@@ -3778,6 +3798,66 @@ module ActiveRecord::SpawnMethods
   extend ::T::Sig
 end
 
+class ActiveRecord::StatementCache
+  def bind_map(); end
+
+  def execute(params, connection, &block); end
+
+  def initialize(query_builder, bind_map, klass); end
+
+  def klass(); end
+
+  def query_builder(); end
+end
+
+class ActiveRecord::StatementCache::BindMap
+  def bind(values); end
+
+  def initialize(bound_attributes); end
+end
+
+class ActiveRecord::StatementCache::BindMap
+end
+
+class ActiveRecord::StatementCache::Params
+  def bind(); end
+end
+
+class ActiveRecord::StatementCache::Params
+end
+
+class ActiveRecord::StatementCache::PartialQuery
+  def initialize(values); end
+end
+
+class ActiveRecord::StatementCache::PartialQuery
+end
+
+class ActiveRecord::StatementCache::Query
+  def initialize(sql); end
+
+  def sql_for(binds, connection); end
+end
+
+class ActiveRecord::StatementCache::Query
+end
+
+class ActiveRecord::StatementCache::Substitute
+end
+
+class ActiveRecord::StatementCache::Substitute
+end
+
+class ActiveRecord::StatementCache
+  def self.create(connection, block=T.unsafe(nil)); end
+
+  def self.partial_query(values); end
+
+  def self.query(sql); end
+
+  def self.unsupported_value?(value); end
+end
+
 module ActiveRecord::Store::ClassMethods
   extend ::T::Sig
 end
@@ -3792,10 +3872,6 @@ end
 
 module ActiveRecord::Suppressor
   extend ::T::Sig
-end
-
-class ActiveRecord::SuppressorRegistry
-  def self.suppressed(*args, &block); end
 end
 
 module ActiveRecord::Tasks::DatabaseTasks
@@ -15483,7 +15559,21 @@ module MiniMime
   extend ::T::Sig
 end
 
-MiniTest = Minitest
+module Minitest
+end
+
+MiniTest::Assertions = Minitest::Assertions
+
+MiniTest::Guard = Minitest::Guard
+
+MiniTest::Reportable = Minitest::Reportable
+
+MiniTest::Runnable = Minitest::Runnable
+
+MiniTest::Test = Minitest::Test
+
+module Minitest
+end
 
 module Minitest
   ENCS = ::T.let(nil, ::T.untyped)
@@ -15772,13 +15862,17 @@ class Net::HTTPBadResponse
   extend ::T::Sig
 end
 
-Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
-
 class Net::HTTPClientError
   extend ::T::Sig
 end
 
-Net::HTTPClientErrorCode = Net::HTTPClientError
+class Net::HTTPClientError
+end
+
+Net::HTTPClientErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
+
+class Net::HTTPClientError
+end
 
 class Net::HTTPConflict
   extend ::T::Sig
@@ -15862,7 +15956,13 @@ class Net::HTTPInformation
   extend ::T::Sig
 end
 
-Net::HTTPInformationCode = Net::HTTPInformation
+class Net::HTTPInformation
+end
+
+Net::HTTPInformationCode::EXCEPTION_TYPE = Net::HTTPError
+
+class Net::HTTPInformation
+end
 
 class Net::HTTPInsufficientStorage
   extend ::T::Sig
@@ -15956,8 +16056,6 @@ class Net::HTTPProxyAuthenticationRequired
   extend ::T::Sig
 end
 
-Net::HTTPRedirection::EXCEPTION_TYPE = Net::HTTPRetriableError
-
 class Net::HTTPRedirection
   extend ::T::Sig
 end
@@ -16012,7 +16110,13 @@ class Net::HTTPResponse
   extend ::T::Sig
 end
 
-Net::HTTPRetriableCode = Net::HTTPRedirection
+class Net::HTTPRedirection
+end
+
+Net::HTTPRetriableCode::EXCEPTION_TYPE = Net::HTTPRetriableError
+
+class Net::HTTPRedirection
+end
 
 class Net::HTTPRetriableError
   extend ::T::Sig
@@ -16022,13 +16126,17 @@ class Net::HTTPSeeOther
   extend ::T::Sig
 end
 
-Net::HTTPServerError::EXCEPTION_TYPE = Net::HTTPFatalError
-
 class Net::HTTPServerError
   extend ::T::Sig
 end
 
-Net::HTTPServerErrorCode = Net::HTTPServerError
+class Net::HTTPServerError
+end
+
+Net::HTTPServerErrorCode::EXCEPTION_TYPE = Net::HTTPFatalError
+
+class Net::HTTPServerError
+end
 
 class Net::HTTPServerException
   extend ::T::Sig
@@ -16048,13 +16156,17 @@ Net::HTTPSession::ProxyMod = Net::HTTP::ProxyDelta
 class Net::HTTP
 end
 
-Net::HTTPSuccess::EXCEPTION_TYPE = Net::HTTPError
-
 class Net::HTTPSuccess
   extend ::T::Sig
 end
 
-Net::HTTPSuccessCode = Net::HTTPSuccess
+class Net::HTTPSuccess
+end
+
+Net::HTTPSuccessCode::EXCEPTION_TYPE = Net::HTTPError
+
+class Net::HTTPSuccess
+end
 
 class Net::HTTPSwitchProtocol
   extend ::T::Sig
