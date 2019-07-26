@@ -1396,30 +1396,6 @@
 # uninitialized constant ActiveSupport::TestCase::TEARDOWN_METHODS
 # uninitialized constant ActiveSupport::TestCase::UNDEFINED
 # uninitialized constant ActiveSupport::TestCase::UNTRACKED
-# wrong constant name <Class:Channel>
-# wrong constant name <Class:Connection>
-# uninitialized constant ApplicationCable::Channel::CALLBACK_FILTER_TYPES
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# uninitialized constant ApplicationController::ACTION_OPTIONS
-# uninitialized constant ApplicationController::CALLBACK_FILTER_TYPES
-# uninitialized constant ApplicationController::DEFAULT_PROTECTED_INSTANCE_VARIABLES
-# uninitialized constant ApplicationController::DEFAULT_SEND_FILE_DISPOSITION
-# uninitialized constant ApplicationController::DEFAULT_SEND_FILE_TYPE
-# uninitialized constant ApplicationController::EXCLUDE_PARAMETERS
-# uninitialized constant ApplicationController::MODULES
-# uninitialized constant ApplicationController::REDIRECT_OPTIONS
-# uninitialized constant ApplicationController::RENDERERS
-# uninitialized constant ApplicationController::RENDER_FORMATS_IN_PRIORITY
-# uninitialized constant ApplicationController::URL_OPTIONS
-# wrong constant name <static-init>
-# uninitialized constant ApplicationJob::CALLBACK_FILTER_TYPES
-# wrong constant name <static-init>
-# uninitialized constant ApplicationMailer::CALLBACK_FILTER_TYPES
-# uninitialized constant ApplicationMailer::DEFAULT_PROTECTED_INSTANCE_VARIABLES
-# uninitialized constant ApplicationMailer::PROTECTED_IVARS
-# wrong constant name <static-init>
 # uninitialized constant ApplicationRecord::ACTIONS
 # uninitialized constant ApplicationRecord::BLACKLISTED_CLASS_METHODS
 # uninitialized constant ApplicationRecord::CALLBACKS
@@ -8501,11 +8477,6 @@
 # uninitialized constant Rails::WelcomeController::URL_OPTIONS
 # wrong constant name index
 # wrong constant name <static-init>
-# wrong constant name <Class:Application>
-# uninitialized constant RailsApp::Application::ABSTRACT_RAILTIES
-# uninitialized constant RailsApp::Application::INITIAL_VARIABLES
-# wrong constant name <static-init>
-# wrong constant name <static-init>
 # wrong constant name <Class:DSL>
 # uninitialized constant Rake::DSL::DEFAULT
 # uninitialized constant Rake::DSL::LN_SUPPORTED
@@ -9388,7 +9359,6 @@
 # wrong constant name wizard
 # wrong constant name wizard=
 # wrong constant name <static-init>
-# wrong constant name <static-init>
 # wrong constant name result
 # undefined method `[]$2' for class `String'
 # undefined method `byteslice$2' for class `String'
@@ -9600,19 +9570,6 @@
 # wrong constant name inspect
 # wrong constant name call
 # wrong constant name initialize
-# wrong constant name <static-init>
-# uninitialized constant TestController::ACTION_OPTIONS
-# uninitialized constant TestController::CALLBACK_FILTER_TYPES
-# uninitialized constant TestController::DEFAULT_PROTECTED_INSTANCE_VARIABLES
-# uninitialized constant TestController::DEFAULT_SEND_FILE_DISPOSITION
-# uninitialized constant TestController::DEFAULT_SEND_FILE_TYPE
-# uninitialized constant TestController::EXCLUDE_PARAMETERS
-# uninitialized constant TestController::MODULES
-# uninitialized constant TestController::REDIRECT_OPTIONS
-# uninitialized constant TestController::RENDERERS
-# uninitialized constant TestController::RENDER_FORMATS_IN_PRIORITY
-# uninitialized constant TestController::URL_OPTIONS
-# wrong constant name index
 # wrong constant name <static-init>
 # wrong constant name <Class:Actions>
 # wrong constant name <Class:RakeCompat>
@@ -10052,14 +10009,12 @@
 # uninitialized constant Wand::UNASSIGNABLE_KEYS
 # wrong constant name autosave_associated_records_for_wizard
 # wrong constant name belongs_to_counter_cache_after_update
-# wrong constant name wood_type
 # wrong constant name build_wizard
 # wrong constant name create_wizard
 # wrong constant name create_wizard!
 # wrong constant name reload_wizard
 # wrong constant name wizard
 # wrong constant name wizard=
-# wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name basilisk_horn
 # wrong constant name core_types
@@ -10101,7 +10056,6 @@
 # wrong constant name spell_books=
 # wrong constant name wand
 # wrong constant name wand=
-# wrong constant name <static-init>
 # wrong constant name <static-init>
 # uninitialized constant Wizard::Gryffindor
 # uninitialized constant Wizard::Hufflepuff

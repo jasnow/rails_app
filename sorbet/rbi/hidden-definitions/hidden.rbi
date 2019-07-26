@@ -3209,42 +3209,6 @@ module ActiveSupport::XmlMini_REXML
   CONTENT_KEY = ::T.let(nil, ::T.untyped)
 end
 
-module ApplicationCable
-end
-
-class ApplicationCable::Channel
-end
-
-class ApplicationCable::Channel
-end
-
-class ApplicationCable::Connection
-end
-
-class ApplicationCable::Connection
-end
-
-module ApplicationCable
-end
-
-class ApplicationController
-end
-
-class ApplicationController
-end
-
-class ApplicationJob
-end
-
-class ApplicationJob
-end
-
-class ApplicationMailer
-end
-
-class ApplicationMailer
-end
-
 class ApplicationRecord
   include ::ApplicationRecord::GeneratedAssociationMethods
 end
@@ -15467,18 +15431,6 @@ end
 class Rails::WelcomeController
 end
 
-module RailsApp
-end
-
-class RailsApp::Application
-end
-
-class RailsApp::Application
-end
-
-module RailsApp
-end
-
 module Rake
   EARLY = ::T.let(nil, ::T.untyped)
   EMPTY_TASK_ARGS = ::T.let(nil, ::T.untyped)
@@ -17923,9 +17875,6 @@ end
 module SpellBook::GeneratedAssociationMethods
 end
 
-class SpellBook
-end
-
 class StopIteration
   def result(); end
 end
@@ -18147,14 +18096,6 @@ class Tempfile::Remover
 end
 
 class Tempfile::Remover
-end
-
-class TestController
-  def index(*args, &blk); end
-end
-
-class TestController
-  extend ::T::Sig
 end
 
 class Thor
@@ -19113,8 +19054,6 @@ class Wand
   def autosave_associated_records_for_wizard(*args); end
 
   def belongs_to_counter_cache_after_update(reflection); end
-
-  def wood_type(*args, &blk); end
 end
 
 module Wand::GeneratedAssociationMethods
@@ -19135,7 +19074,6 @@ module Wand::GeneratedAssociationMethods
 end
 
 class Wand
-  extend ::T::Sig
   def self.basilisk_horn(*args); end
 
   def self.core_types(); end

@@ -1,4 +1,4 @@
-# typed: ignore
+# typed: strong
 class Wand < ApplicationRecord
   sig { void }
   def wood_type(); end
