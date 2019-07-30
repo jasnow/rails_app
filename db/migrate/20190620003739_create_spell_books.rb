@@ -1,5 +1,6 @@
-# typed: false
+# typed: strict
 class CreateSpellBooks < ActiveRecord::Migration[5.2]
+  extend T::Sig
   sig { returns(T.untyped) }
   def change
     create_table :spell_books do |t|

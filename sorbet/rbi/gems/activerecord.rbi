@@ -887,7 +887,6 @@ class ActiveRecord::ExplainRegistry
   def queries; end
   def queries=(arg0); end
   def reset; end
-  def self.collect?(*args, &block); end
   extend ActiveSupport::PerThreadRegistry
 end
 class ActiveRecord::ExplainSubscriber
@@ -3672,12 +3671,6 @@ class ActiveRecord::ConnectionAdapters::TransactionManager
   def open_transactions; end
   def rollback_transaction(transaction = nil); end
   def within_new_transaction(options = nil); end
-end
-class CreateWizards < ActiveRecord::Migration::Current
-end
-class CreateWands < ActiveRecord::Migration::Current
-end
-class CreateSpellBooks < ActiveRecord::Migration::Current
 end
 module Anonymous_ActiveRecord_AttributeMethods_GeneratedAttributeMethods_16
 end
