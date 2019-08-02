@@ -4377,6 +4377,21 @@ class Crass::Tokenizer
   RE_WHITESPACE_ANCHORED = ::T.let(nil, ::T.untyped)
 end
 
+class CreateSpellBooks
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class CreateWands
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class CreateWizards
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
 module Dalli
   VERSION = ::T.let(nil, ::T.untyped)
 end
@@ -11844,7 +11859,6 @@ end
 
 class MatchData
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def named_captures(); end
 end
 
 class Method
@@ -17560,6 +17574,8 @@ class Sorbet::Private::RequireEverything
 
   def self.rails?(); end
 
+  def self.rails_load_paths(); end
+
   def self.rb_file_paths(); end
 
   def self.require_all_files(); end
@@ -17897,6 +17913,11 @@ class Tempfile::Remover
 end
 
 class Tempfile::Remover
+end
+
+class TestController
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 class Thor
@@ -18875,6 +18896,8 @@ module Wand::GeneratedAssociationMethods
 end
 
 class Wand
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
   def self.basilisk_horn(*args); end
 
   def self.core_types(); end
