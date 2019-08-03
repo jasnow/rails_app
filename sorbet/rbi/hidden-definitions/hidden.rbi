@@ -18300,14 +18300,6 @@ end
 
 class ThreadGroup
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def add(_); end
-
-  def enclose(); end
-
-  def enclosed?(); end
-
-  def list(); end
-  Default = ::T.let(nil, ::T.untyped)
 end
 
 module ThreadSafe
