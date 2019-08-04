@@ -1,4 +1,4 @@
-# typed: ignore
+# typed: strong
 #HID: %w[
 #HID:   .ruby-version
 #HID:   .rbenv-vars
