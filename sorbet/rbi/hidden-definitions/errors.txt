@@ -998,7 +998,6 @@
 # uninitialized constant ActiveRecord::InternalMetadata::NAME_COMPILABLE_REGEXP
 # uninitialized constant ActiveRecord::InternalMetadata::UNASSIGNABLE_KEYS
 # wrong constant name <static-init>
-# wrong constant name <static-init>
 # wrong constant name []
 # wrong constant name []=
 # wrong constant name create_table
@@ -9210,7 +9209,6 @@
 # uninitialized constant SpellBook::CALLBACKS
 # uninitialized constant SpellBook::CALLBACK_FILTER_TYPES
 # uninitialized constant SpellBook::CALL_COMPILABLE_REGEXP
-# wrong constant name <Class:GeneratedAssociationMethods>
 # uninitialized constant SpellBook::MAX_PASSWORD_LENGTH_ALLOWED
 # uninitialized constant SpellBook::NAME_COMPILABLE_REGEXP
 # uninitialized constant SpellBook::UNASSIGNABLE_KEYS
@@ -9220,9 +9218,6 @@
 # wrong constant name create_wizard
 # wrong constant name create_wizard!
 # wrong constant name reload_wizard
-# wrong constant name wizard
-# wrong constant name wizard=
-# wrong constant name <static-init>
 # wrong constant name result
 # undefined method `[]$2' for class `String'
 # undefined method `byteslice$2' for class `String'
@@ -9860,7 +9855,6 @@
 # uninitialized constant Wand::CALLBACKS
 # uninitialized constant Wand::CALLBACK_FILTER_TYPES
 # uninitialized constant Wand::CALL_COMPILABLE_REGEXP
-# wrong constant name <Class:GeneratedAssociationMethods>
 # uninitialized constant Wand::MAX_PASSWORD_LENGTH_ALLOWED
 # uninitialized constant Wand::NAME_COMPILABLE_REGEXP
 # uninitialized constant Wand::UNASSIGNABLE_KEYS
@@ -9870,21 +9864,12 @@
 # wrong constant name create_wizard
 # wrong constant name create_wizard!
 # wrong constant name reload_wizard
-# wrong constant name wizard
-# wrong constant name wizard=
-# wrong constant name <static-init>
-# wrong constant name basilisk_horn
-# wrong constant name core_types
-# wrong constant name dragon_heartstring
-# wrong constant name phoenix_feather
-# wrong constant name unicorn_tail_hair
 # wrong constant name warn
 # uninitialized constant Wizard::ACTIONS
 # uninitialized constant Wizard::BLACKLISTED_CLASS_METHODS
 # uninitialized constant Wizard::CALLBACKS
 # uninitialized constant Wizard::CALLBACK_FILTER_TYPES
 # uninitialized constant Wizard::CALL_COMPILABLE_REGEXP
-# wrong constant name <Class:GeneratedAssociationMethods>
 # uninitialized constant Wizard::MAX_PASSWORD_LENGTH_ALLOWED
 # uninitialized constant Wizard::NAME_COMPILABLE_REGEXP
 # uninitialized constant Wizard::UNASSIGNABLE_KEYS
@@ -9909,15 +9894,6 @@
 # wrong constant name reload_wand
 # wrong constant name spell_book_ids
 # wrong constant name spell_book_ids=
-# wrong constant name spell_books
-# wrong constant name spell_books=
-# wrong constant name wand
-# wrong constant name wand=
-# wrong constant name <static-init>
-# uninitialized constant Wizard::Gryffindor
-# uninitialized constant Wizard::Hufflepuff
-# uninitialized constant Wizard::Ravenclaw
-# uninitialized constant Wizard::Slytherin
 # wrong constant name after_add_for_spell_books
 # wrong constant name after_add_for_spell_books=
 # wrong constant name after_add_for_spell_books?
@@ -9930,7 +9906,6 @@
 # wrong constant name before_remove_for_spell_books
 # wrong constant name before_remove_for_spell_books=
 # wrong constant name before_remove_for_spell_books?
-# wrong constant name houses
 # wrong constant name <Class:BufError>
 # wrong constant name <Class:DataError>
 # wrong constant name <Class:Deflate>

@@ -2016,9 +2016,6 @@ module ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods
   ID_ATTRIBUTE_METHODS = ::T.let(nil, ::T.untyped)
 end
 
-class ActiveRecord::AttributeMethods::TimeZoneConversion::TimeZoneConverter
-end
-
 module ActiveRecord::Batches
   ORDER_IGNORE_MESSAGE = ::T.let(nil, ::T.untyped)
 end
@@ -2141,9 +2138,6 @@ end
 
 module ActiveRecord::LegacyYamlAdapter
   def self.convert(klass, coder); end
-end
-
-class ActiveRecord::Locking::LockingType
 end
 
 class ActiveRecord::LogSubscriber
@@ -2619,13 +2613,7 @@ ActiveRecord::Type::Helpers = ActiveModel::Type::Helpers
 
 ActiveRecord::Type::Integer = ActiveModel::Type::Integer
 
-class ActiveRecord::Type::Serialized
-end
-
 ActiveRecord::Type::String = ActiveModel::Type::String
-
-class ActiveRecord::Type::Time::Value
-end
 
 module ActiveRecord::VERSION
   MAJOR = ::T.let(nil, ::T.untyped)
@@ -11534,9 +11522,6 @@ end
 module Mail::Parsers
 end
 
-class Mail::PartsList
-end
-
 class Mail::PhraseList
   def initialize(string); end
 
@@ -11745,21 +11730,7 @@ class MiniMime::Info
   BINARY_ENCODINGS = ::T.let(nil, ::T.untyped)
 end
 
-module Minitest
-end
-
-MiniTest::Assertions = Minitest::Assertions
-
-MiniTest::Guard = Minitest::Guard
-
-MiniTest::Reportable = Minitest::Reportable
-
-MiniTest::Runnable = Minitest::Runnable
-
-MiniTest::Test = Minitest::Test
-
-module Minitest
-end
+MiniTest = Minitest
 
 module Minitest
   ENCS = ::T.let(nil, ::T.untyped)
@@ -11898,9 +11869,13 @@ class Net::BufferedIO
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
 
-Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
+class Net::HTTPClientError
+end
 
-Net::HTTPClientErrorCode = Net::HTTPClientError
+Net::HTTPClientErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
+
+class Net::HTTPClientError
+end
 
 Net::HTTPFatalErrorCode = Net::HTTPClientError
 
@@ -11924,9 +11899,13 @@ Net::HTTPMovedTemporarily = Net::HTTPFound
 
 Net::HTTPMultipleChoice = Net::HTTPMultipleChoices
 
-Net::HTTPRedirection::EXCEPTION_TYPE = Net::HTTPRetriableError
+class Net::HTTPRedirection
+end
 
-Net::HTTPRedirectionCode = Net::HTTPRedirection
+Net::HTTPRedirectionCode::EXCEPTION_TYPE = Net::HTTPRetriableError
+
+class Net::HTTPRedirection
+end
 
 Net::HTTPRequestURITooLarge = Net::HTTPRequestURITooLong
 
@@ -11942,9 +11921,13 @@ end
 
 Net::HTTPRetriableCode = Net::HTTPRedirection
 
-Net::HTTPServerError::EXCEPTION_TYPE = Net::HTTPFatalError
+class Net::HTTPServerError
+end
 
-Net::HTTPServerErrorCode = Net::HTTPServerError
+Net::HTTPServerErrorCode::EXCEPTION_TYPE = Net::HTTPFatalError
+
+class Net::HTTPServerError
+end
 
 class Net::HTTP
 end
@@ -11956,9 +11939,13 @@ Net::HTTPSession::ProxyMod = Net::HTTP::ProxyDelta
 class Net::HTTP
 end
 
-Net::HTTPSuccess::EXCEPTION_TYPE = Net::HTTPError
+class Net::HTTPSuccess
+end
 
-Net::HTTPSuccessCode = Net::HTTPSuccess
+Net::HTTPSuccessCode::EXCEPTION_TYPE = Net::HTTPError
+
+class Net::HTTPSuccess
+end
 
 Net::HTTPUnknownResponse::EXCEPTION_TYPE = Net::HTTPError
 
@@ -12730,6 +12717,14 @@ end
 
 class OptionParser::Switch
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
+end
+
+module Parlour
+  VERSION = ::T.let(nil, ::T.untyped)
+end
+
+class Parlour::RbiGenerator::Parameter
+  PREFIXES = ::T.let(nil, ::T.untyped)
 end
 
 ParseError = Racc::ParseError
@@ -17514,6 +17509,8 @@ class Sorbet::Private::TodoRBI
   def self.output_file(); end
 end
 
+SorbetRails::ModelPlugins::Base::Parameter = Parlour::RbiGenerator::Parameter
+
 class SortedSet
   def initialize(*args, &block); end
 end
@@ -17523,7 +17520,6 @@ class SortedSet
 end
 
 class SpellBook
-  include ::SpellBook::GeneratedAssociationMethods
   def autosave_associated_records_for_wizard(*args); end
 
   def belongs_to_counter_cache_after_update(reflection); end
@@ -17537,13 +17533,6 @@ module SpellBook::GeneratedAssociationMethods
   def create_wizard!(*args, &block); end
 
   def reload_wizard(); end
-
-  def wizard(); end
-
-  def wizard=(value); end
-end
-
-module SpellBook::GeneratedAssociationMethods
 end
 
 class StopIteration
@@ -18712,7 +18701,6 @@ class WEBrick::HTTPServlet::AbstractServlet
 end
 
 class Wand
-  include ::Wand::GeneratedAssociationMethods
   def autosave_associated_records_for_wizard(*args); end
 
   def belongs_to_counter_cache_after_update(reflection); end
@@ -18726,27 +18714,11 @@ module Wand::GeneratedAssociationMethods
   def create_wizard!(*args, &block); end
 
   def reload_wizard(); end
-
-  def wizard(); end
-
-  def wizard=(value); end
-end
-
-module Wand::GeneratedAssociationMethods
 end
 
 class Wand
   extend ::T::Private::Methods::MethodHooks
   extend ::T::Private::Methods::SingletonMethodHooks
-  def self.basilisk_horn(*args); end
-
-  def self.core_types(); end
-
-  def self.dragon_heartstring(*args); end
-
-  def self.phoenix_feather(*args); end
-
-  def self.unicorn_tail_hair(*args); end
 end
 
 module Warning
@@ -18758,7 +18730,6 @@ module Warning
 end
 
 class Wizard
-  include ::Wizard::GeneratedAssociationMethods
   def after_add_for_spell_books(); end
 
   def after_add_for_spell_books=(val); end
@@ -18802,28 +18773,9 @@ module Wizard::GeneratedAssociationMethods
   def spell_book_ids(); end
 
   def spell_book_ids=(ids); end
-
-  def spell_books(); end
-
-  def spell_books=(value); end
-
-  def wand(); end
-
-  def wand=(value); end
-end
-
-module Wizard::GeneratedAssociationMethods
 end
 
 class Wizard
-  def self.Gryffindor(*args); end
-
-  def self.Hufflepuff(*args); end
-
-  def self.Ravenclaw(*args); end
-
-  def self.Slytherin(*args); end
-
   def self.after_add_for_spell_books(); end
 
   def self.after_add_for_spell_books=(val); end
@@ -18847,8 +18799,6 @@ class Wizard
   def self.before_remove_for_spell_books=(val); end
 
   def self.before_remove_for_spell_books?(); end
-
-  def self.houses(); end
 end
 
 YAML = Psych
