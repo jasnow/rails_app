@@ -2105,10 +2105,43 @@ class ActiveRecord::InternalMetadata
   include ::ActiveRecord::InternalMetadata::GeneratedAssociationMethods
 end
 
+class ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+
+class ActiveRecord::InternalMetadata::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
 module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
 end
 
 module ActiveRecord::InternalMetadata::GeneratedAssociationMethods
+end
+
+module ActiveRecord::InternalMetadata::GeneratedRelationMethods
+end
+
+module ActiveRecord::InternalMetadata::GeneratedRelationMethods
 end
 
 class ActiveRecord::InternalMetadata
@@ -3201,10 +3234,43 @@ class ApplicationRecord
   include ::ApplicationRecord::GeneratedAssociationMethods
 end
 
+class ApplicationRecord::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ApplicationRecord::GeneratedRelationMethods
+end
+
+class ApplicationRecord::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class ApplicationRecord::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ApplicationRecord::GeneratedRelationMethods
+end
+
+class ApplicationRecord::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class ApplicationRecord::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::ApplicationRecord::GeneratedRelationMethods
+end
+
+class ApplicationRecord::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
 module ApplicationRecord::GeneratedAssociationMethods
 end
 
 module ApplicationRecord::GeneratedAssociationMethods
+end
+
+module ApplicationRecord::GeneratedRelationMethods
+end
+
+module ApplicationRecord::GeneratedRelationMethods
 end
 
 module Arel
@@ -8675,10 +8741,6 @@ class Numeric
 
   def infinite?(); end
 
-  def negative?(); end
-
-  def positive?(); end
-
   EXABYTE = ::T.let(nil, ::T.untyped)
   GIGABYTE = ::T.let(nil, ::T.untyped)
   KILOBYTE = ::T.let(nil, ::T.untyped)
@@ -13713,6 +13775,33 @@ class SpellBook
   def belongs_to_counter_cache_after_update(reflection); end
 end
 
+class SpellBook::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::SpellBook::GeneratedRelationMethods
+end
+
+class SpellBook::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class SpellBook::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::SpellBook::GeneratedRelationMethods
+end
+
+class SpellBook::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class SpellBook::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::SpellBook::GeneratedRelationMethods
+end
+
+class SpellBook::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
 module SpellBook::GeneratedAssociationMethods
   def build_wizard(*args, &block); end
 
@@ -13721,6 +13810,12 @@ module SpellBook::GeneratedAssociationMethods
   def create_wizard!(*args, &block); end
 
   def reload_wizard(); end
+end
+
+module SpellBook::GeneratedRelationMethods
+end
+
+module SpellBook::GeneratedRelationMethods
 end
 
 class StopIteration
@@ -14748,6 +14843,33 @@ class Wand
   def belongs_to_counter_cache_after_update(reflection); end
 end
 
+class Wand::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Wand::GeneratedRelationMethods
+end
+
+class Wand::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Wand::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Wand::GeneratedRelationMethods
+end
+
+class Wand::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Wand::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Wand::GeneratedRelationMethods
+end
+
+class Wand::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
 module Wand::GeneratedAssociationMethods
   def build_wizard(*args, &block); end
 
@@ -14756,6 +14878,19 @@ module Wand::GeneratedAssociationMethods
   def create_wizard!(*args, &block); end
 
   def reload_wizard(); end
+end
+
+module Wand::GeneratedRelationMethods
+  def basilisk_horn(*args, &block); end
+
+  def dragon_heartstring(*args, &block); end
+
+  def phoenix_feather(*args, &block); end
+
+  def unicorn_tail_hair(*args, &block); end
+end
+
+module Wand::GeneratedRelationMethods
 end
 
 class Wand
@@ -14803,6 +14938,33 @@ class Wizard
   def validate_associated_records_for_spell_books(*args); end
 end
 
+class Wizard::ActiveRecord_AssociationRelation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Wizard::GeneratedRelationMethods
+end
+
+class Wizard::ActiveRecord_AssociationRelation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Wizard::ActiveRecord_Associations_CollectionProxy
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Wizard::GeneratedRelationMethods
+end
+
+class Wizard::ActiveRecord_Associations_CollectionProxy
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+class Wizard::ActiveRecord_Relation
+  include ::ActiveRecord::Delegation::ClassSpecificRelation
+  include ::Wizard::GeneratedRelationMethods
+end
+
+class Wizard::ActiveRecord_Relation
+  extend ::ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
 module Wizard::GeneratedAssociationMethods
   def build_wand(*args, &block); end
 
@@ -14815,6 +14977,19 @@ module Wizard::GeneratedAssociationMethods
   def spell_book_ids(); end
 
   def spell_book_ids=(ids); end
+end
+
+module Wizard::GeneratedRelationMethods
+  def Gryffindor(*args, &block); end
+
+  def Hufflepuff(*args, &block); end
+
+  def Ravenclaw(*args, &block); end
+
+  def Slytherin(*args, &block); end
+end
+
+module Wizard::GeneratedRelationMethods
 end
 
 class Wizard
