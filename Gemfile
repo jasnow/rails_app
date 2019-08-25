@@ -30,8 +30,8 @@ gem 'sorbet', :group => :development
 gem 'sorbet-runtime'
 gem 'sorbet-rails'
 # Use Redis adapter to run Action Cable in production
-gem 'redis' # for cache_store
-gem 'dalli' # for cache_store
+#gem 'redis' # for cache_store
+#gem 'dalli' # for cache_store
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
