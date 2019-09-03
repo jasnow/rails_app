@@ -1,4 +1,4 @@
-# typed: strict
+# typed: ignore
 class CreateWands < ActiveRecord::Migration[5.2]
   extend T::Sig
   sig { returns(T.untyped) }

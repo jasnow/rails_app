@@ -1,4 +1,4 @@
-# typed: strict
+# typed: false
 class TestController < ApplicationController
   extend T::Sig 
   sig { returns(T.untyped) }
