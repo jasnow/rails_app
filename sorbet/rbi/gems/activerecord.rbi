@@ -3575,43 +3575,6 @@ class ActiveRecord::Associations::Builder::HasMany < ActiveRecord::Associations:
   def self.valid_dependent_options; end
   def self.valid_options(options); end
 end
-module ActiveRecord::Migration::Compatibility
-  def self.find(version); end
-end
-class ActiveRecord::Migration::Compatibility::V5_1 < ActiveRecord::Migration::Current
-  def change_column(table_name, column_name, type, options = nil); end
-  def create_table(table_name, options = nil); end
-end
-class ActiveRecord::Migration::Compatibility::V5_0 < ActiveRecord::Migration::Compatibility::V5_1
-  def add_belongs_to(table_name, ref_name, **options); end
-  def add_column(table_name, column_name, type, options = nil); end
-  def add_reference(table_name, ref_name, **options); end
-  def change_table(table_name, options = nil); end
-  def compatible_table_definition(t); end
-  def create_join_table(table_1, table_2, column_options: nil, **options); end
-  def create_table(table_name, options = nil); end
-end
-module ActiveRecord::Migration::Compatibility::V5_0::TableDefinition
-  def belongs_to(*args, **options); end
-  def primary_key(name, type = nil, **options); end
-  def references(*args, **options); end
-end
-class ActiveRecord::Migration::Compatibility::V4_2 < ActiveRecord::Migration::Compatibility::V5_0
-  def add_belongs_to(*arg0, **options); end
-  def add_reference(*arg0, **options); end
-  def add_timestamps(_, **options); end
-  def change_table(table_name, options = nil); end
-  def compatible_table_definition(t); end
-  def create_table(table_name, options = nil); end
-  def index_exists?(table_name, column_name, options = nil); end
-  def index_name_for_remove(table_name, options = nil); end
-  def remove_index(table_name, options = nil); end
-end
-module ActiveRecord::Migration::Compatibility::V4_2::TableDefinition
-  def belongs_to(*arg0, **options); end
-  def references(*arg0, **options); end
-  def timestamps(**options); end
-end
 class ActiveRecord::ConnectionAdapters::TransactionState
   def add_child(state); end
   def commit!; end

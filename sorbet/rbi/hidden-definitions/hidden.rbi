@@ -2297,6 +2297,68 @@ end
 class ActiveRecord::Migration::CommandRecorder
 end
 
+class ActiveRecord::Migration::Compatibility::V4_2
+  def add_belongs_to(*_, **options); end
+
+  def add_reference(*_, **options); end
+
+  def add_timestamps(_, **options); end
+
+  def index_exists?(table_name, column_name, options=T.unsafe(nil)); end
+
+  def remove_index(table_name, options=T.unsafe(nil)); end
+end
+
+module ActiveRecord::Migration::Compatibility::V4_2::TableDefinition
+  def belongs_to(*_, **options); end
+
+  def references(*_, **options); end
+
+  def timestamps(**options); end
+end
+
+module ActiveRecord::Migration::Compatibility::V4_2::TableDefinition
+end
+
+class ActiveRecord::Migration::Compatibility::V4_2
+end
+
+class ActiveRecord::Migration::Compatibility::V5_0
+  def add_belongs_to(table_name, ref_name, **options); end
+
+  def add_column(table_name, column_name, type, options=T.unsafe(nil)); end
+
+  def add_reference(table_name, ref_name, **options); end
+
+  def change_table(table_name, options=T.unsafe(nil)); end
+
+  def create_join_table(table_1, table_2, column_options: T.unsafe(nil), **options); end
+end
+
+module ActiveRecord::Migration::Compatibility::V5_0::TableDefinition
+  def belongs_to(*args, **options); end
+
+  def primary_key(name, type=T.unsafe(nil), **options); end
+
+  def references(*args, **options); end
+end
+
+module ActiveRecord::Migration::Compatibility::V5_0::TableDefinition
+end
+
+class ActiveRecord::Migration::Compatibility::V5_0
+end
+
+class ActiveRecord::Migration::Compatibility::V5_1
+  def change_column(table_name, column_name, type, options=T.unsafe(nil)); end
+
+  def create_table(table_name, options=T.unsafe(nil)); end
+end
+
+module ActiveRecord::Migration::Compatibility
+  def self.find(version); end
+end
+
 class ActiveRecord::Migrator
   MIGRATOR_SALT = ::T.let(nil, ::T.untyped)
 end
@@ -3166,6 +3228,30 @@ module ActiveSupport::XmlMini_REXML
   CONTENT_KEY = ::T.let(nil, ::T.untyped)
 end
 
+module ApplicationCable
+end
+
+class ApplicationCable::Channel
+end
+
+class ApplicationCable::Channel
+end
+
+class ApplicationCable::Connection
+end
+
+class ApplicationCable::Connection
+end
+
+module ApplicationCable
+end
+
+class ApplicationJob
+end
+
+class ApplicationJob
+end
+
 class ApplicationRecord
   include ::ApplicationRecord::GeneratedAssociationMethods
 end
@@ -3207,6 +3293,9 @@ module ApplicationRecord::GeneratedRelationMethods
 end
 
 module ApplicationRecord::GeneratedRelationMethods
+end
+
+class ApplicationRecord
 end
 
 module Arel
@@ -4286,21 +4375,6 @@ class Crass::Tokenizer
   RE_UNICODE_RANGE_START = ::T.let(nil, ::T.untyped)
   RE_WHITESPACE = ::T.let(nil, ::T.untyped)
   RE_WHITESPACE_ANCHORED = ::T.let(nil, ::T.untyped)
-end
-
-class CreateSpellBooks
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class CreateWands
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
-end
-
-class CreateWizards
-  extend ::T::Private::Methods::MethodHooks
-  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 class Data
@@ -7961,13 +8035,9 @@ end
 
 Net::HTTP::ProxyMod = Net::HTTP::ProxyDelta
 
-class Net::HTTPClientError
-end
+Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
 
-Net::HTTPClientErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
-
-class Net::HTTPClientError
-end
+Net::HTTPClientErrorCode = Net::HTTPClientError
 
 Net::HTTPFatalErrorCode = Net::HTTPClientError
 
@@ -8005,13 +8075,9 @@ end
 
 Net::HTTPRetriableCode = Net::HTTPRedirection
 
-class Net::HTTPServerError
-end
+Net::HTTPServerError::EXCEPTION_TYPE = Net::HTTPFatalError
 
-Net::HTTPServerErrorCode::EXCEPTION_TYPE = Net::HTTPFatalError
-
-class Net::HTTPServerError
-end
+Net::HTTPServerErrorCode = Net::HTTPServerError
 
 Net::HTTPSession = Net::HTTP
 
