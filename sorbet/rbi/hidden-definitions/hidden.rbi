@@ -3443,14 +3443,6 @@ class Binding
   def clone(); end
 
   def irb(); end
-
-  def local_variable_defined?(_); end
-
-  def local_variable_get(_); end
-
-  def local_variable_set(_, _1); end
-
-  def receiver(); end
 end
 
 Bundler::Deprecate = Gem::Deprecate
@@ -8615,10 +8607,6 @@ end
 
 class Numeric
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def finite?(); end
-
-  def infinite?(); end
-
   EXABYTE = ::T.let(nil, ::T.untyped)
   GIGABYTE = ::T.let(nil, ::T.untyped)
   KILOBYTE = ::T.let(nil, ::T.untyped)

@@ -1626,10 +1626,6 @@
 # wrong constant name ver
 # wrong constant name clone
 # wrong constant name irb
-# wrong constant name local_variable_defined?
-# wrong constant name local_variable_get
-# wrong constant name local_variable_set
-# wrong constant name receiver
 # wrong constant name <static-init>
 # wrong constant name environment
 # wrong constant name report
@@ -5152,9 +5148,7 @@
 # undefined method `step$2' for class `Numeric'
 # undefined method `truncate$1' for class `Numeric'
 # wrong constant name ceil$2
-# wrong constant name finite?
 # wrong constant name floor$2
-# wrong constant name infinite?
 # wrong constant name round$1
 # wrong constant name step$2
 # wrong constant name truncate$1
