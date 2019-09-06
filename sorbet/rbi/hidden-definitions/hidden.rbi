@@ -3352,7 +3352,6 @@ class Array
   def shelljoin(); end
 
   def to_h(); end
-
 end
 
 class Array
@@ -4667,7 +4666,6 @@ end
 class Enumerator
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
   def each_with_index(); end
-
 end
 
 class Enumerator::Generator
@@ -4986,7 +4984,6 @@ class File
   def self.mkfifo(*_); end
 
   def self.probe_stat_in(dir); end
-
 end
 
 module FileUtils
@@ -5792,7 +5789,6 @@ class IO
   def self.foreach(*_); end
 
   def self.pipe(*_); end
-
 end
 
 class IPAddr
@@ -6559,7 +6555,6 @@ module Kernel
   def pretty_inspect(); end
 
   def respond_to?(*_); end
-
 end
 
 module Kernel
@@ -8851,7 +8846,6 @@ class Pathname
   def fnmatch?(*_); end
 
   def make_symlink(_); end
-
 end
 
 class PrettyPrint
@@ -8899,7 +8893,6 @@ end
 
 module Process::Sys
   def self.getegid(); end
-
 end
 
 class Process::Tms
@@ -8928,7 +8921,6 @@ end
 
 module Process
   def self.setpgrp(); end
-
 end
 
 module Psych
@@ -13283,7 +13275,6 @@ class String
   def unicode_normalized?(form=T.unsafe(nil)); end
 
   def unpack1(_); end
-
   BLANK_RE = ::T.let(nil, ::T.untyped)
   ENCODED_BLANKS = ::T.let(nil, ::T.untyped)
 end
