@@ -3352,6 +3352,7 @@ class Array
   def shelljoin(); end
 
   def to_h(); end
+
 end
 
 class Array
@@ -4666,6 +4667,7 @@ end
 class Enumerator
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
   def each_with_index(); end
+
 end
 
 class Enumerator::Generator
@@ -4984,6 +4986,7 @@ class File
   def self.mkfifo(*_); end
 
   def self.probe_stat_in(dir); end
+
 end
 
 module FileUtils
@@ -5789,6 +5792,7 @@ class IO
   def self.foreach(*_); end
 
   def self.pipe(*_); end
+
 end
 
 class IPAddr
@@ -6555,6 +6559,7 @@ module Kernel
   def pretty_inspect(); end
 
   def respond_to?(*_); end
+
 end
 
 module Kernel
@@ -8020,11 +8025,13 @@ class Net::BufferedIO
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
 
-Net::HTTP::ProxyMod = Net::HTTP::ProxyDelta
+class Net::HTTPClientError
+end
 
-Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
+Net::HTTPClientErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
 
-Net::HTTPClientErrorCode = Net::HTTPClientError
+class Net::HTTPClientError
+end
 
 Net::HTTPFatalErrorCode = Net::HTTPClientError
 
@@ -8036,17 +8043,25 @@ class Net::HTTPGenericRequest::Chunker
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
 
-Net::HTTPInformation::EXCEPTION_TYPE = Net::HTTPError
+class Net::HTTPInformation
+end
 
-Net::HTTPInformationCode = Net::HTTPInformation
+Net::HTTPInformationCode::EXCEPTION_TYPE = Net::HTTPError
+
+class Net::HTTPInformation
+end
 
 Net::HTTPMovedTemporarily = Net::HTTPFound
 
 Net::HTTPMultipleChoice = Net::HTTPMultipleChoices
 
-Net::HTTPRedirection::EXCEPTION_TYPE = Net::HTTPRetriableError
+class Net::HTTPRedirection
+end
 
-Net::HTTPRedirectionCode = Net::HTTPRedirection
+Net::HTTPRedirectionCode::EXCEPTION_TYPE = Net::HTTPRetriableError
+
+class Net::HTTPRedirection
+end
 
 Net::HTTPRequestURITooLarge = Net::HTTPRequestURITooLong
 
@@ -8062,15 +8077,31 @@ end
 
 Net::HTTPRetriableCode = Net::HTTPRedirection
 
-Net::HTTPServerError::EXCEPTION_TYPE = Net::HTTPFatalError
+class Net::HTTPServerError
+end
 
-Net::HTTPServerErrorCode = Net::HTTPServerError
+Net::HTTPServerErrorCode::EXCEPTION_TYPE = Net::HTTPFatalError
 
-Net::HTTPSession = Net::HTTP
+class Net::HTTPServerError
+end
 
-Net::HTTPSuccess::EXCEPTION_TYPE = Net::HTTPError
+class Net::HTTP
+end
 
-Net::HTTPSuccessCode = Net::HTTPSuccess
+Net::HTTPSession::ProxyDelta = Net::HTTP::ProxyDelta
+
+Net::HTTPSession::ProxyMod = Net::HTTP::ProxyDelta
+
+class Net::HTTP
+end
+
+class Net::HTTPSuccess
+end
+
+Net::HTTPSuccessCode::EXCEPTION_TYPE = Net::HTTPError
+
+class Net::HTTPSuccess
+end
 
 Net::HTTPUnknownResponse::EXCEPTION_TYPE = Net::HTTPError
 
@@ -8846,6 +8877,7 @@ class Pathname
   def fnmatch?(*_); end
 
   def make_symlink(_); end
+
 end
 
 class PrettyPrint
@@ -8893,6 +8925,7 @@ end
 
 module Process::Sys
   def self.getegid(); end
+
 end
 
 class Process::Tms
@@ -8921,6 +8954,7 @@ end
 
 module Process
   def self.setpgrp(); end
+
 end
 
 module Psych
@@ -13275,6 +13309,7 @@ class String
   def unicode_normalized?(form=T.unsafe(nil)); end
 
   def unpack1(_); end
+
   BLANK_RE = ::T.let(nil, ::T.untyped)
   ENCODED_BLANKS = ::T.let(nil, ::T.untyped)
 end
