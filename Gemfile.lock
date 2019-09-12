@@ -47,6 +47,7 @@ GEM
     byebug (11.0.1)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+    dalli (2.7.10)
     erubi (1.8.0)
     ffi (1.11.1)
     globalid (0.4.2)
@@ -109,6 +110,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    redis (4.1.2)
     ruby_dep (1.5.0)
     sorbet (0.4.4746)
       sorbet-static (= 0.4.4746)
@@ -137,9 +139,11 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  dalli
   listen
   puma
   rails (~> 5.2.3)
+  redis
   sorbet
   sorbet-rails
   sorbet-runtime
