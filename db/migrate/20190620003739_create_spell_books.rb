@@ -1,4 +1,4 @@
-# typed: ignore
+# typed: false
 class CreateSpellBooks < ActiveRecord::Migration[5.2]
   extend T::Sig
   sig { returns(T.untyped) }
