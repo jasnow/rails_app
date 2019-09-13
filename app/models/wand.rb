@@ -1,4 +1,4 @@
-# typed: false
+# typed: strict
 class Wand < ApplicationRecord
 
   enum core_type: {

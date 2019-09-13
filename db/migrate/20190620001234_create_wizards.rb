@@ -1,4 +1,4 @@
-# typed: false
+# typed: strict
 class CreateWizards < ActiveRecord::Migration[5.2]
   extend T::Sig
   sig { returns(T.untyped) }
