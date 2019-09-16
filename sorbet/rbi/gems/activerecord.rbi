@@ -830,133 +830,6 @@ module ActiveRecord::Tasks
 end
 class ActiveRecord::Railtie < Rails::Railtie
 end
-module ActiveRecord::Type
-  def self.add_modifier(*args, &block); end
-  def self.current_adapter_name; end
-  def self.default_value; end
-  def self.lookup(*args, adapter: nil, **kwargs); end
-  def self.register(type_name, klass = nil, **options, &block); end
-  def self.registry; end
-  def self.registry=(arg0); end
-end
-module ActiveRecord::Type::Internal
-end
-module ActiveRecord::Type::Internal::Timezone
-  def default_timezone; end
-  def is_utc?; end
-end
-class ActiveRecord::Type::Date < ActiveModel::Type::Date
-  include ActiveRecord::Type::Internal::Timezone
-end
-class ActiveRecord::Type::DateTime < ActiveModel::Type::DateTime
-  include ActiveRecord::Type::Internal::Timezone
-end
-class ActiveRecord::Type::DecimalWithoutScale < ActiveModel::Type::BigInteger
-  def type; end
-  def type_cast_for_schema(value); end
-end
-class ActiveRecord::Type::Json < ActiveModel::Type::Value
-  def accessor; end
-  def changed_in_place?(raw_old_value, new_value); end
-  def deserialize(value); end
-  def serialize(value); end
-  def type; end
-  include ActiveModel::Type::Helpers::Mutable
-end
-class ActiveRecord::Type::Time < ActiveModel::Type::Time
-  def serialize(value); end
-  include ActiveRecord::Type::Internal::Timezone
-end
-class ActiveRecord::Type::Time::Value < Anonymous_Delegator_11
-end
-class ActiveRecord::Type::Text < ActiveModel::Type::String
-  def type; end
-end
-class ActiveRecord::Type::UnsignedInteger < ActiveModel::Type::Integer
-  def max_value; end
-  def min_value; end
-end
-class ActiveRecord::Type::Serialized < Anonymous_Delegator_12
-  def accessor; end
-  def assert_valid_value(value); end
-  def changed_in_place?(raw_old_value, value); end
-  def coder; end
-  def default_value?(value); end
-  def deserialize(value); end
-  def encoded(value); end
-  def force_equality?(value); end
-  def initialize(subtype, coder); end
-  def inspect; end
-  def serialize(value); end
-  def subtype; end
-  include ActiveModel::Type::Helpers::Mutable
-end
-class ActiveRecord::Type::AdapterSpecificRegistry < ActiveModel::Type::Registry
-  def add_modifier(options, klass, **args); end
-  def find_registration(symbol, *args); end
-  def registration_klass; end
-end
-class ActiveRecord::Type::Registration
-  def <=>(other); end
-  def adapter; end
-  def block; end
-  def call(_registry, *args, adapter: nil, **kwargs); end
-  def conflicts_with?(other); end
-  def has_adapter_conflict?(other); end
-  def initialize(name, block, adapter: nil, override: nil); end
-  def matches?(type_name, *args, **kwargs); end
-  def matches_adapter?(adapter: nil, **arg1); end
-  def name; end
-  def override; end
-  def priority; end
-  def priority_except_adapter; end
-  def same_priority_except_adapter?(other); end
-end
-class ActiveRecord::Type::DecorationRegistration < ActiveRecord::Type::Registration
-  def call(registry, *args, **kwargs); end
-  def initialize(options, klass, adapter: nil); end
-  def klass; end
-  def matches?(*args, **kwargs); end
-  def matches_options?(**kwargs); end
-  def options; end
-  def priority; end
-end
-class ActiveRecord::TypeConflictError < StandardError
-end
-class ActiveRecord::Type::TypeMap
-  def alias_type(key, target_key); end
-  def clear; end
-  def fetch(lookup_key, *args, &block); end
-  def initialize; end
-  def lookup(lookup_key, *args); end
-  def perform_fetch(lookup_key, *args); end
-  def register_type(key, value = nil, &block); end
-end
-class ActiveRecord::Type::HashLookupTypeMap < ActiveRecord::Type::TypeMap
-  def alias_type(type, alias_type); end
-  def key?(key); end
-  def keys; end
-  def perform_fetch(type, *args, &block); end
-end
-module ActiveRecord::Enum
-  def _enum_methods_module; end
-  def detect_enum_conflict!(enum_name, method_name, klass_method = nil); end
-  def enum(*args, **kwargs); end
-  def inherited(base); end
-  def raise_conflict_error(enum_name, method_name, type: nil, source: nil); end
-  def self.extended(base); end
-end
-class ActiveRecord::Enum::EnumType < ActiveModel::Type::Value
-  def assert_valid_value(value); end
-  def cast(value); end
-  def deserialize(value); end
-  def initialize(name, mapping, subtype); end
-  def mapping; end
-  def name; end
-  def serialize(value); end
-  def subtype; end
-  def type(*args, &block); end
-end
 class ActiveRecord::LogSubscriber < ActiveSupport::LogSubscriber
   def self.reset_runtime; end
   def self.runtime; end
@@ -1235,6 +1108,133 @@ module ActiveRecord::Explain
   def collecting_queries_for_explain; end
   def exec_explain(queries); end
   def render_bind(attr); end
+end
+module ActiveRecord::Type
+  def self.add_modifier(*args, &block); end
+  def self.current_adapter_name; end
+  def self.default_value; end
+  def self.lookup(*args, adapter: nil, **kwargs); end
+  def self.register(type_name, klass = nil, **options, &block); end
+  def self.registry; end
+  def self.registry=(arg0); end
+end
+module ActiveRecord::Type::Internal
+end
+module ActiveRecord::Type::Internal::Timezone
+  def default_timezone; end
+  def is_utc?; end
+end
+class ActiveRecord::Type::Date < ActiveModel::Type::Date
+  include ActiveRecord::Type::Internal::Timezone
+end
+class ActiveRecord::Type::DateTime < ActiveModel::Type::DateTime
+  include ActiveRecord::Type::Internal::Timezone
+end
+class ActiveRecord::Type::DecimalWithoutScale < ActiveModel::Type::BigInteger
+  def type; end
+  def type_cast_for_schema(value); end
+end
+class ActiveRecord::Type::Json < ActiveModel::Type::Value
+  def accessor; end
+  def changed_in_place?(raw_old_value, new_value); end
+  def deserialize(value); end
+  def serialize(value); end
+  def type; end
+  include ActiveModel::Type::Helpers::Mutable
+end
+class ActiveRecord::Type::Time < ActiveModel::Type::Time
+  def serialize(value); end
+  include ActiveRecord::Type::Internal::Timezone
+end
+class ActiveRecord::Type::Time::Value < Anonymous_Delegator_11
+end
+class ActiveRecord::Type::Text < ActiveModel::Type::String
+  def type; end
+end
+class ActiveRecord::Type::UnsignedInteger < ActiveModel::Type::Integer
+  def max_value; end
+  def min_value; end
+end
+class ActiveRecord::Type::Serialized < Anonymous_Delegator_12
+  def accessor; end
+  def assert_valid_value(value); end
+  def changed_in_place?(raw_old_value, value); end
+  def coder; end
+  def default_value?(value); end
+  def deserialize(value); end
+  def encoded(value); end
+  def force_equality?(value); end
+  def initialize(subtype, coder); end
+  def inspect; end
+  def serialize(value); end
+  def subtype; end
+  include ActiveModel::Type::Helpers::Mutable
+end
+class ActiveRecord::Type::AdapterSpecificRegistry < ActiveModel::Type::Registry
+  def add_modifier(options, klass, **args); end
+  def find_registration(symbol, *args); end
+  def registration_klass; end
+end
+class ActiveRecord::Type::Registration
+  def <=>(other); end
+  def adapter; end
+  def block; end
+  def call(_registry, *args, adapter: nil, **kwargs); end
+  def conflicts_with?(other); end
+  def has_adapter_conflict?(other); end
+  def initialize(name, block, adapter: nil, override: nil); end
+  def matches?(type_name, *args, **kwargs); end
+  def matches_adapter?(adapter: nil, **arg1); end
+  def name; end
+  def override; end
+  def priority; end
+  def priority_except_adapter; end
+  def same_priority_except_adapter?(other); end
+end
+class ActiveRecord::Type::DecorationRegistration < ActiveRecord::Type::Registration
+  def call(registry, *args, **kwargs); end
+  def initialize(options, klass, adapter: nil); end
+  def klass; end
+  def matches?(*args, **kwargs); end
+  def matches_options?(**kwargs); end
+  def options; end
+  def priority; end
+end
+class ActiveRecord::TypeConflictError < StandardError
+end
+class ActiveRecord::Type::TypeMap
+  def alias_type(key, target_key); end
+  def clear; end
+  def fetch(lookup_key, *args, &block); end
+  def initialize; end
+  def lookup(lookup_key, *args); end
+  def perform_fetch(lookup_key, *args); end
+  def register_type(key, value = nil, &block); end
+end
+class ActiveRecord::Type::HashLookupTypeMap < ActiveRecord::Type::TypeMap
+  def alias_type(type, alias_type); end
+  def key?(key); end
+  def keys; end
+  def perform_fetch(type, *args, &block); end
+end
+module ActiveRecord::Enum
+  def _enum_methods_module; end
+  def detect_enum_conflict!(enum_name, method_name, klass_method = nil); end
+  def enum(*args, **kwargs); end
+  def inherited(base); end
+  def raise_conflict_error(enum_name, method_name, type: nil, source: nil); end
+  def self.extended(base); end
+end
+class ActiveRecord::Enum::EnumType < ActiveModel::Type::Value
+  def assert_valid_value(value); end
+  def cast(value); end
+  def deserialize(value); end
+  def initialize(name, mapping, subtype); end
+  def mapping; end
+  def name; end
+  def serialize(value); end
+  def subtype; end
+  def type(*args, &block); end
 end
 module ActiveRecord::CollectionCacheKey
   def collection_cache_key(collection = nil, timestamp_column = nil); end
@@ -3574,6 +3574,43 @@ class ActiveRecord::Associations::Builder::HasMany < ActiveRecord::Associations:
   def self.macro; end
   def self.valid_dependent_options; end
   def self.valid_options(options); end
+end
+module ActiveRecord::Migration::Compatibility
+  def self.find(version); end
+end
+class ActiveRecord::Migration::Compatibility::V5_1 < ActiveRecord::Migration::Current
+  def change_column(table_name, column_name, type, options = nil); end
+  def create_table(table_name, options = nil); end
+end
+class ActiveRecord::Migration::Compatibility::V5_0 < ActiveRecord::Migration::Compatibility::V5_1
+  def add_belongs_to(table_name, ref_name, **options); end
+  def add_column(table_name, column_name, type, options = nil); end
+  def add_reference(table_name, ref_name, **options); end
+  def change_table(table_name, options = nil); end
+  def compatible_table_definition(t); end
+  def create_join_table(table_1, table_2, column_options: nil, **options); end
+  def create_table(table_name, options = nil); end
+end
+module ActiveRecord::Migration::Compatibility::V5_0::TableDefinition
+  def belongs_to(*args, **options); end
+  def primary_key(name, type = nil, **options); end
+  def references(*args, **options); end
+end
+class ActiveRecord::Migration::Compatibility::V4_2 < ActiveRecord::Migration::Compatibility::V5_0
+  def add_belongs_to(*arg0, **options); end
+  def add_reference(*arg0, **options); end
+  def add_timestamps(_, **options); end
+  def change_table(table_name, options = nil); end
+  def compatible_table_definition(t); end
+  def create_table(table_name, options = nil); end
+  def index_exists?(table_name, column_name, options = nil); end
+  def index_name_for_remove(table_name, options = nil); end
+  def remove_index(table_name, options = nil); end
+end
+module ActiveRecord::Migration::Compatibility::V4_2::TableDefinition
+  def belongs_to(*arg0, **options); end
+  def references(*arg0, **options); end
+  def timestamps(**options); end
 end
 class ActiveRecord::ConnectionAdapters::TransactionState
   def add_child(state); end

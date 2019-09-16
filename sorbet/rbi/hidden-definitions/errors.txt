@@ -1120,35 +1120,6 @@
 # wrong constant name invert_transaction
 # wrong constant name <static-init>
 # wrong constant name <static-init>
-# uninitialized constant ActiveRecord::Migration::Compatibility::V4_2::MigrationFilenameRegexp
-# wrong constant name <Class:TableDefinition>
-# wrong constant name add_belongs_to
-# wrong constant name add_reference
-# wrong constant name add_timestamps
-# wrong constant name index_exists?
-# wrong constant name remove_index
-# wrong constant name belongs_to
-# wrong constant name references
-# wrong constant name timestamps
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# uninitialized constant ActiveRecord::Migration::Compatibility::V5_0::MigrationFilenameRegexp
-# wrong constant name <Class:TableDefinition>
-# wrong constant name add_belongs_to
-# wrong constant name add_column
-# wrong constant name add_reference
-# wrong constant name change_table
-# wrong constant name create_join_table
-# wrong constant name belongs_to
-# wrong constant name primary_key
-# wrong constant name references
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# uninitialized constant ActiveRecord::Migration::Compatibility::V5_1::MigrationFilenameRegexp
-# wrong constant name change_column
-# wrong constant name create_table
-# wrong constant name <static-init>
-# wrong constant name find
 # wrong constant name any?
 # wrong constant name calculate
 # wrong constant name delete
@@ -1460,14 +1431,6 @@
 # uninitialized constant ActiveSupport::TestCase::TEARDOWN_METHODS
 # uninitialized constant ActiveSupport::TestCase::UNDEFINED
 # uninitialized constant ActiveSupport::TestCase::UNTRACKED
-# wrong constant name <Class:Channel>
-# wrong constant name <Class:Connection>
-# uninitialized constant ApplicationCable::Channel::CALLBACK_FILTER_TYPES
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# wrong constant name <static-init>
-# uninitialized constant ApplicationJob::CALLBACK_FILTER_TYPES
-# wrong constant name <static-init>
 # uninitialized constant ApplicationRecord::ACTIONS
 # wrong constant name <Class:ActiveRecord_AssociationRelation>
 # wrong constant name <Class:ActiveRecord_Associations_CollectionProxy>
@@ -1525,7 +1488,6 @@
 # A copy of ApplicationRecord::ActiveRecord_Relation has been removed from the module tree but is still active!
 # A copy of ApplicationRecord::ActiveRecord_Relation has been removed from the module tree but is still active!
 # A copy of ApplicationRecord::ActiveRecord_Relation has been removed from the module tree but is still active!
-# wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name <static-init>
