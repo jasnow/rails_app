@@ -1538,10 +1538,6 @@
 # wrong constant name version
 # wrong constant name version=
 # wrong constant name <Class:ThreadsTable>
-# wrong constant name <Class:HtmlExtension>
-# uninitialized constant CGI::RFC822_DAYS
-# uninitialized constant CGI::RFC822_MONTHS
-# uninitialized constant CGI::TABLE_FOR_ESCAPE_HTML__
 # wrong constant name a
 # wrong constant name base
 # wrong constant name blockquote
@@ -1737,7 +1733,6 @@
 # wrong constant name delegate
 # wrong constant name instance_delegate
 # wrong constant name garbage_collect
-# wrong constant name <=>
 # wrong constant name s3_uri_signer
 # wrong constant name <Class:ConfigurationError>
 # wrong constant name <Class:InstanceProfileError>
@@ -1757,7 +1752,6 @@
 # wrong constant name secret_access_key=
 # wrong constant name security_token
 # wrong constant name security_token=
-# wrong constant name <=>
 # wrong constant name <Class:BaseLocator>
 # wrong constant name <Class:BlockLocator>
 # wrong constant name <Class:UnscopedLocator>
@@ -3768,43 +3762,6 @@
 # uninitialized constant Net::FTPTempError
 # uninitialized constant Net::HTTP::DigestAuth
 # uninitialized constant Net::HTTP::Persistent
-# uninitialized constant Net::IMAP::OPENSSL_FIPS
-# uninitialized constant Net::IMAP::OPENSSL_LIBRARY_VERSION
-# uninitialized constant Net::IMAP::OPENSSL_VERSION
-# uninitialized constant Net::IMAP::OPENSSL_VERSION_NUMBER
-# uninitialized constant Net::IMAP::OP_ALL
-# uninitialized constant Net::IMAP::OP_CIPHER_SERVER_PREFERENCE
-# uninitialized constant Net::IMAP::OP_DONT_INSERT_EMPTY_FRAGMENTS
-# uninitialized constant Net::IMAP::OP_EPHEMERAL_RSA
-# uninitialized constant Net::IMAP::OP_MICROSOFT_BIG_SSLV3_BUFFER
-# uninitialized constant Net::IMAP::OP_MICROSOFT_SESS_ID_BUG
-# uninitialized constant Net::IMAP::OP_MSIE_SSLV2_RSA_PADDING
-# uninitialized constant Net::IMAP::OP_NETSCAPE_CA_DN_BUG
-# uninitialized constant Net::IMAP::OP_NETSCAPE_CHALLENGE_BUG
-# uninitialized constant Net::IMAP::OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG
-# uninitialized constant Net::IMAP::OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG
-# uninitialized constant Net::IMAP::OP_NO_COMPRESSION
-# uninitialized constant Net::IMAP::OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION
-# uninitialized constant Net::IMAP::OP_NO_SSLv2
-# uninitialized constant Net::IMAP::OP_NO_SSLv3
-# uninitialized constant Net::IMAP::OP_NO_TICKET
-# uninitialized constant Net::IMAP::OP_NO_TLSv1
-# uninitialized constant Net::IMAP::OP_NO_TLSv1_1
-# uninitialized constant Net::IMAP::OP_NO_TLSv1_2
-# uninitialized constant Net::IMAP::OP_PKCS1_CHECK_1
-# uninitialized constant Net::IMAP::OP_PKCS1_CHECK_2
-# uninitialized constant Net::IMAP::OP_SINGLE_DH_USE
-# uninitialized constant Net::IMAP::OP_SINGLE_ECDH_USE
-# uninitialized constant Net::IMAP::OP_SSLEAY_080_CLIENT_DH_BUG
-# uninitialized constant Net::IMAP::OP_SSLREF2_REUSE_CERT_TYPE_BUG
-# uninitialized constant Net::IMAP::OP_TLS_BLOCK_PADDING_BUG
-# uninitialized constant Net::IMAP::OP_TLS_D5_BUG
-# uninitialized constant Net::IMAP::OP_TLS_ROLLBACK_BUG
-# uninitialized constant Net::IMAP::VERIFY_CLIENT_ONCE
-# uninitialized constant Net::IMAP::VERIFY_FAIL_IF_NO_PEER_CERT
-# uninitialized constant Net::IMAP::VERIFY_NONE
-# uninitialized constant Net::IMAP::VERIFY_PEER
-# uninitialized constant Net::IMAP::VERSION
 # wrong constant name active?
 # wrong constant name address
 # wrong constant name apop?
@@ -4328,11 +4285,7 @@
 # uninitialized constant Puma::Binder::CONTENT_LENGTH_S
 # uninitialized constant Puma::Binder::CONTINUE
 # uninitialized constant Puma::Binder::EARLY_HINTS
-# uninitialized constant Puma::Binder::ERROR_400_RESPONSE
-# uninitialized constant Puma::Binder::ERROR_404_RESPONSE
-# uninitialized constant Puma::Binder::ERROR_408_RESPONSE
-# uninitialized constant Puma::Binder::ERROR_500_RESPONSE
-# uninitialized constant Puma::Binder::ERROR_503_RESPONSE
+# uninitialized constant Puma::Binder::ERROR_RESPONSE
 # uninitialized constant Puma::Binder::FAST_TRACK_KA_TIMEOUT
 # uninitialized constant Puma::Binder::FIRST_DATA_TIMEOUT
 # uninitialized constant Puma::Binder::GATEWAY_INTERFACE
@@ -4408,11 +4361,7 @@
 # uninitialized constant Puma::Client::CONTENT_LENGTH_S
 # uninitialized constant Puma::Client::CONTINUE
 # uninitialized constant Puma::Client::EARLY_HINTS
-# uninitialized constant Puma::Client::ERROR_400_RESPONSE
-# uninitialized constant Puma::Client::ERROR_404_RESPONSE
-# uninitialized constant Puma::Client::ERROR_408_RESPONSE
-# uninitialized constant Puma::Client::ERROR_500_RESPONSE
-# uninitialized constant Puma::Client::ERROR_503_RESPONSE
+# uninitialized constant Puma::Client::ERROR_RESPONSE
 # uninitialized constant Puma::Client::FAST_TRACK_KA_TIMEOUT
 # uninitialized constant Puma::Client::FIRST_DATA_TIMEOUT
 # uninitialized constant Puma::Client::GATEWAY_INTERFACE
@@ -4488,11 +4437,7 @@
 # uninitialized constant Puma::Events::CONTENT_LENGTH_S
 # uninitialized constant Puma::Events::CONTINUE
 # uninitialized constant Puma::Events::EARLY_HINTS
-# uninitialized constant Puma::Events::ERROR_400_RESPONSE
-# uninitialized constant Puma::Events::ERROR_404_RESPONSE
-# uninitialized constant Puma::Events::ERROR_408_RESPONSE
-# uninitialized constant Puma::Events::ERROR_500_RESPONSE
-# uninitialized constant Puma::Events::ERROR_503_RESPONSE
+# uninitialized constant Puma::Events::ERROR_RESPONSE
 # uninitialized constant Puma::Events::FAST_TRACK_KA_TIMEOUT
 # uninitialized constant Puma::Events::FIRST_DATA_TIMEOUT
 # uninitialized constant Puma::Events::GATEWAY_INTERFACE
@@ -4569,11 +4514,7 @@
 # uninitialized constant Puma::Server::CONTENT_LENGTH_S
 # uninitialized constant Puma::Server::CONTINUE
 # uninitialized constant Puma::Server::EARLY_HINTS
-# uninitialized constant Puma::Server::ERROR_400_RESPONSE
-# uninitialized constant Puma::Server::ERROR_404_RESPONSE
-# uninitialized constant Puma::Server::ERROR_408_RESPONSE
-# uninitialized constant Puma::Server::ERROR_500_RESPONSE
-# uninitialized constant Puma::Server::ERROR_503_RESPONSE
+# uninitialized constant Puma::Server::ERROR_RESPONSE
 # uninitialized constant Puma::Server::FAST_TRACK_KA_TIMEOUT
 # uninitialized constant Puma::Server::FIRST_DATA_TIMEOUT
 # uninitialized constant Puma::Server::GATEWAY_INTERFACE
