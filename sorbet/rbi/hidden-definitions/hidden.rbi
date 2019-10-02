@@ -6547,13 +6547,7 @@ module Loofah::Elements
   STRICT_BLOCK_LEVEL_HTML5 = ::T.let(nil, ::T.untyped)
 end
 
-module Loofah::HTML5::Scrub
-  CONTROL_CHARACTERS = ::T.let(nil, ::T.untyped)
-  CRASS_SEMICOLON = ::T.let(nil, ::T.untyped)
-  CSS_KEYWORDISH = ::T.let(nil, ::T.untyped)
-end
-
-module Loofah::HTML5::WhiteList
+module Loofah::HTML5::SafeList
   ACCEPTABLE_ATTRIBUTES = ::T.let(nil, ::T.untyped)
   ACCEPTABLE_CSS_FUNCTIONS = ::T.let(nil, ::T.untyped)
   ACCEPTABLE_CSS_KEYWORDS = ::T.let(nil, ::T.untyped)
@@ -6583,6 +6577,14 @@ module Loofah::HTML5::WhiteList
   TAGS_SAFE_WITH_LIBXML2 = ::T.let(nil, ::T.untyped)
   VOID_ELEMENTS = ::T.let(nil, ::T.untyped)
 end
+
+module Loofah::HTML5::Scrub
+  CONTROL_CHARACTERS = ::T.let(nil, ::T.untyped)
+  CRASS_SEMICOLON = ::T.let(nil, ::T.untyped)
+  CSS_KEYWORDISH = ::T.let(nil, ::T.untyped)
+end
+
+Loofah::HTML5::WhiteList = Loofah::HTML5::SafeList
 
 module Loofah::LibxmlWorkarounds
   BROKEN_ESCAPING_ATTRIBUTES = ::T.let(nil, ::T.untyped)
@@ -7898,9 +7900,13 @@ end
 
 Net::APOPSession = Net::APOP
 
-Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
+class Net::HTTPClientError
+end
 
-Net::HTTPClientErrorCode = Net::HTTPClientError
+Net::HTTPClientErrorCode::EXCEPTION_TYPE = Net::HTTPServerException
+
+class Net::HTTPClientError
+end
 
 Net::HTTPFatalErrorCode = Net::HTTPClientError
 
@@ -7916,9 +7922,13 @@ Net::HTTPMovedTemporarily = Net::HTTPFound
 
 Net::HTTPMultipleChoice = Net::HTTPMultipleChoices
 
-Net::HTTPRedirection::EXCEPTION_TYPE = Net::HTTPRetriableError
+class Net::HTTPRedirection
+end
 
-Net::HTTPRedirectionCode = Net::HTTPRedirection
+Net::HTTPRedirectionCode::EXCEPTION_TYPE = Net::HTTPRetriableError
+
+class Net::HTTPRedirection
+end
 
 Net::HTTPRequestURITooLarge = Net::HTTPRequestURITooLong
 
@@ -7926,9 +7936,13 @@ Net::HTTPResponceReceiver = Net::HTTPResponse
 
 Net::HTTPRetriableCode = Net::HTTPRedirection
 
-Net::HTTPServerError::EXCEPTION_TYPE = Net::HTTPFatalError
+class Net::HTTPServerError
+end
 
-Net::HTTPServerErrorCode = Net::HTTPServerError
+Net::HTTPServerErrorCode::EXCEPTION_TYPE = Net::HTTPFatalError
+
+class Net::HTTPServerError
+end
 
 class Net::HTTP
 end
@@ -11431,28 +11445,6 @@ end
 
 class Regexp
   def self.union(*_); end
-end
-
-module RubyDep
-  PROJECT_URL = ::T.let(nil, ::T.untyped)
-end
-
-class RubyDep::NullLogger
-  LOG_LEVELS = ::T.let(nil, ::T.untyped)
-end
-
-class RubyDep::RubyVersion
-  VERSION_INFO = ::T.let(nil, ::T.untyped)
-end
-
-class RubyDep::Warning
-  DISABLING_ENVIRONMENT_VAR = ::T.let(nil, ::T.untyped)
-  NOTICE_BUGGY_ALTERNATIVE = ::T.let(nil, ::T.untyped)
-  NOTICE_HOW_TO_DISABLE = ::T.let(nil, ::T.untyped)
-  NOTICE_OPEN_ISSUE = ::T.let(nil, ::T.untyped)
-  NOTICE_RECOMMENDATION = ::T.let(nil, ::T.untyped)
-  PREFIX = ::T.let(nil, ::T.untyped)
-  WARNING = ::T.let(nil, ::T.untyped)
 end
 
 class RubyLex
