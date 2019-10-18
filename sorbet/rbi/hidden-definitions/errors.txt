@@ -1621,12 +1621,6 @@
 # wrong constant name max_retries=
 # wrong constant name redirect_limit
 # wrong constant name redirect_limit=
-# uninitialized constant Bundler::GemHelper::DEFAULT
-# uninitialized constant Bundler::GemHelper::LN_SUPPORTED
-# uninitialized constant Bundler::GemHelper::LOW_METHODS
-# uninitialized constant Bundler::GemHelper::METHODS
-# uninitialized constant Bundler::GemHelper::OPT_TABLE
-# uninitialized constant Bundler::GemHelper::RUBY
 # wrong constant name allowed_push_host
 # wrong constant name already_tagged?
 # wrong constant name base
@@ -6041,17 +6035,26 @@
 # uninitialized constant Rails::WelcomeController::URL_OPTIONS
 # wrong constant name index
 # wrong constant name <static-init>
+# wrong constant name <Class:DSL>
 # uninitialized constant Rake::DSL::DEFAULT
 # uninitialized constant Rake::DSL::LN_SUPPORTED
 # uninitialized constant Rake::DSL::LOW_METHODS
 # uninitialized constant Rake::DSL::METHODS
 # uninitialized constant Rake::DSL::OPT_TABLE
 # uninitialized constant Rake::DSL::RUBY
+# wrong constant name <static-init>
 # uninitialized constant Rake::FileUtilsExt::LN_SUPPORTED
 # uninitialized constant Rake::FileUtilsExt::LOW_METHODS
 # uninitialized constant Rake::FileUtilsExt::METHODS
 # uninitialized constant Rake::FileUtilsExt::OPT_TABLE
 # uninitialized constant Rake::FileUtilsExt::RUBY
+# wrong constant name add_rakelib
+# wrong constant name application
+# wrong constant name application=
+# wrong constant name load_rakefile
+# wrong constant name original_dir
+# wrong constant name suggested_thread_count
+# wrong constant name with_application
 # wrong constant name raw_seed
 # uninitialized constant Range::RANGE_FORMATS
 # uninitialized constant Rational::EXABYTE

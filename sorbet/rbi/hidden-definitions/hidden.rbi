@@ -3566,10 +3566,6 @@ class Bundler::Fetcher
 end
 
 class Bundler::GemHelper
-  include ::Rake::DSL
-  include ::Rake::FileUtilsExt
-  include ::FileUtils
-  include ::FileUtils::StreamUtils_
   def allowed_push_host(); end
 
   def already_tagged?(); end
@@ -4891,8 +4887,6 @@ class File
 
   def self.probe_stat_in(dir); end
 end
-
-FileList = Rake::FileList
 
 module FileUtils
   include ::FileUtils::StreamUtils_
@@ -6376,10 +6370,6 @@ module IRB
   def self.version(); end
 end
 
-module ITypeAssert
-  Elem = ::T.let(nil, ::T.untyped)
-end
-
 class Integer
   include ::JSON::Ext::Generator::GeneratorMethods::Integer
   include ::ActiveSupport::NumericWithFormat
@@ -7736,7 +7726,21 @@ class MiniMime::Info
   BINARY_ENCODINGS = ::T.let(nil, ::T.untyped)
 end
 
-MiniTest = Minitest
+module Minitest
+end
+
+MiniTest::Assertions = Minitest::Assertions
+
+MiniTest::Guard = Minitest::Guard
+
+MiniTest::Reportable = Minitest::Reportable
+
+MiniTest::Runnable = Minitest::Runnable
+
+MiniTest::Test = Minitest::Test
+
+module Minitest
+end
 
 module Minitest
   ENCS = ::T.let(nil, ::T.untyped)
@@ -10810,20 +10814,13 @@ module Rake
   VERSION = ::T.let(nil, ::T.untyped)
 end
 
-class Rake::Application
-  DEFAULT_RAKEFILES = ::T.let(nil, ::T.untyped)
-end
-
-module Rake::Backtrace
-  SUPPRESSED_PATHS = ::T.let(nil, ::T.untyped)
-  SUPPRESSED_PATHS_RE = ::T.let(nil, ::T.untyped)
-  SUPPRESS_PATTERN = ::T.let(nil, ::T.untyped)
-  SYS_KEYS = ::T.let(nil, ::T.untyped)
-  SYS_PATHS = ::T.let(nil, ::T.untyped)
+module Rake::DSL
+  include ::Rake::FileUtilsExt
+  include ::FileUtils
+  include ::FileUtils::StreamUtils_
 end
 
 module Rake::DSL
-  include ::FileUtils::StreamUtils_
 end
 
 class Rake::FileList
@@ -10846,35 +10843,24 @@ module Rake::FileUtilsExt
   extend ::FileUtils::StreamUtils_
 end
 
-class Rake::InvocationChain
-  EMPTY = ::T.let(nil, ::T.untyped)
-end
-
-class Rake::LinkedList
-  EMPTY = ::T.let(nil, ::T.untyped)
-end
-
-class Rake::Promise
-  NOT_SET = ::T.let(nil, ::T.untyped)
-end
-
-class Rake::Scope
-  EMPTY = ::T.let(nil, ::T.untyped)
-end
-
-module Rake::Version
-  BUILD = ::T.let(nil, ::T.untyped)
-  MAJOR = ::T.let(nil, ::T.untyped)
-  MINOR = ::T.let(nil, ::T.untyped)
-  NUMBERS = ::T.let(nil, ::T.untyped)
-  OTHER = ::T.let(nil, ::T.untyped)
-end
-
 module Rake
+  extend ::Rake::FileUtilsExt
+  extend ::FileUtils
   extend ::FileUtils::StreamUtils_
-end
+  def self.add_rakelib(*files); end
 
-RakeFileUtils = Rake::FileUtilsExt
+  def self.application(); end
+
+  def self.application=(app); end
+
+  def self.load_rakefile(path); end
+
+  def self.original_dir(); end
+
+  def self.suggested_thread_count(); end
+
+  def self.with_application(block_application=T.unsafe(nil)); end
+end
 
 class Random
   def self.raw_seed(_); end
@@ -13415,10 +13401,6 @@ class SystemExit
   def status(); end
 
   def success?(); end
-end
-
-class TA
-  Elem = ::T.let(nil, ::T.untyped)
 end
 
 module TZInfo::RubyCoreSupport
