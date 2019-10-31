@@ -3300,6 +3300,7 @@ class Array
   def shelljoin(); end
 
   def to_h(); end
+
 end
 
 class Array
@@ -4818,6 +4819,7 @@ end
 
 module Exception2MessageMapper
   def bind(cl); end
+
 end
 
 Exception2MessageMapper::E2MM = Exception2MessageMapper
@@ -5115,8 +5117,6 @@ class Hash
   def default_proc(); end
 
   def default_proc=(default_proc); end
-
-  def dig(*_); end
 
   def fetch_values(*_); end
 
@@ -5645,8 +5645,6 @@ IO::EWOULDBLOCKWaitWritable = IO::EAGAINWaitWritable
 
 class IO
   def self.foreach(*_); end
-
-  def self.pipe(*_); end
 end
 
 class IPAddr
@@ -7881,8 +7879,6 @@ Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
 Net::HTTPClientErrorCode = Net::HTTPClientError
 
 Net::HTTPFatalErrorCode = Net::HTTPClientError
-
-Net::HTTPInformation::EXCEPTION_TYPE = Net::HTTPError
 
 Net::HTTPInformationCode = Net::HTTPInformation
 
@@ -14066,6 +14062,7 @@ module URI
   def self.encode_www_form_component(str, enc=T.unsafe(nil)); end
 
   def self.get_encoding(label); end
+
 end
 
 class UnboundMethod
