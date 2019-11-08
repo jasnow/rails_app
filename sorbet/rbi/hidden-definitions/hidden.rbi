@@ -7728,21 +7728,7 @@ class MiniMime::Info
   BINARY_ENCODINGS = ::T.let(nil, ::T.untyped)
 end
 
-module Minitest
-end
-
-MiniTest::Assertions = Minitest::Assertions
-
-MiniTest::Guard = Minitest::Guard
-
-MiniTest::Reportable = Minitest::Reportable
-
-MiniTest::Runnable = Minitest::Runnable
-
-MiniTest::Test = Minitest::Test
-
-module Minitest
-end
+MiniTest = Minitest
 
 module Minitest
   ENCS = ::T.let(nil, ::T.untyped)
@@ -7879,6 +7865,8 @@ Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
 Net::HTTPClientErrorCode = Net::HTTPClientError
 
 Net::HTTPFatalErrorCode = Net::HTTPClientError
+
+Net::HTTPInformation::EXCEPTION_TYPE = Net::HTTPError
 
 Net::HTTPInformationCode = Net::HTTPInformation
 
