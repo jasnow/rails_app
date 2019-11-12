@@ -2488,10 +2488,10 @@
 # wrong constant name name=
 # wrong constant name passwd
 # wrong constant name passwd=
-# uninitialized constant Etc::Group::Elem
 # wrong constant name []
 # wrong constant name each
 # wrong constant name members
+# wrong constant name <Class:Group>
 # wrong constant name change
 # wrong constant name change=
 # wrong constant name dir
@@ -2512,10 +2512,10 @@
 # wrong constant name uclass=
 # wrong constant name uid
 # wrong constant name uid=
-# uninitialized constant Etc::Passwd::Elem
 # wrong constant name []
 # wrong constant name each
 # wrong constant name members
+# wrong constant name <Class:Passwd>
 # wrong constant name exception
 # undefined method `Fail<defaultArg>1' for module `Exception2MessageMapper'
 # undefined method `Raise<defaultArg>1' for module `Exception2MessageMapper'
@@ -2618,7 +2618,6 @@
 # wrong constant name []
 # wrong constant name members
 # wrong constant name <static-init>
-# uninitialized constant Gem::Specification::Elem
 # wrong constant name correct_for_windows_path
 # wrong constant name <Class:BaseLocator>
 # wrong constant name <Class:BlockLocator>
@@ -7037,7 +7036,7 @@
 # uninitialized constant Rails::Generators::TestCase::UNTRACKED
 # wrong constant name properties
 # wrong constant name properties=
-# undefined singleton method `property<defaultArg>1' for `#<Module:0x00007fb7ebd98b18>'
+# undefined singleton method `property<defaultArg>1' for `#<Module:0x00007fe9e31d40c8>'
 # wrong constant name <static-init>
 # wrong constant name properties
 # wrong constant name properties=
@@ -8185,6 +8184,7 @@
 # wrong constant name to_h
 # wrong constant name values
 # wrong constant name values_at
+# wrong constant name <Class:Struct>
 # wrong constant name errno
 # wrong constant name status
 # wrong constant name success?
